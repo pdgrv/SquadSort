@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5899580222303946403}
   - component: {fileID: 7671987785797066574}
   - component: {fileID: 5726811237690868742}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WK_weapon_sword_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,6 +55,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -90,7 +91,7 @@ GameObject:
   - component: {fileID: 6229104727352659654}
   - component: {fileID: 5313586598662415667}
   - component: {fileID: 3900939347066904534}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WK_Shield_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,6 +135,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -169,7 +171,7 @@ GameObject:
   - component: {fileID: 976546837846277652}
   - component: {fileID: 8825837007510925490}
   - component: {fileID: 4187466013630209179}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WK_weapon_pick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -213,6 +215,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -248,7 +251,7 @@ GameObject:
   - component: {fileID: 6827059951571922452}
   - component: {fileID: 6566418643274519271}
   - component: {fileID: 1119572445818753554}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WK_Xtra_wood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -291,6 +294,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -326,7 +330,7 @@ GameObject:
   - component: {fileID: 5107398659116868019}
   - component: {fileID: 9025526065367855244}
   - component: {fileID: 7360467865308829849}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WK_weapon_spear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -370,6 +374,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -405,7 +410,7 @@ GameObject:
   - component: {fileID: 8107354750352008155}
   - component: {fileID: 1991362812555660765}
   - component: {fileID: 7850657724027403591}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WK_Shield_C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -449,6 +454,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -482,7 +488,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2276958864514025926}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R_hand_container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -522,7 +528,7 @@ GameObject:
   - component: {fileID: 687053406919456351}
   - component: {fileID: 5858505405957965435}
   - component: {fileID: 8308138348671551579}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WK_weapon_sword_A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -566,6 +572,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -601,7 +608,7 @@ GameObject:
   - component: {fileID: 5853326529811367063}
   - component: {fileID: 8007759793740925158}
   - component: {fileID: 8183561505777657301}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WK_Shield_D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -645,6 +652,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -680,7 +688,7 @@ GameObject:
   - component: {fileID: 8677054476549576316}
   - component: {fileID: 1993205777484244431}
   - component: {fileID: 126236295202098163}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WK_weapon_Bow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -724,6 +732,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -759,7 +768,7 @@ GameObject:
   - component: {fileID: 3467235080136287262}
   - component: {fileID: 7250879575809148930}
   - component: {fileID: 7940096038201007535}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WK_weapon_staff_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -802,6 +811,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -837,7 +847,7 @@ GameObject:
   - component: {fileID: 3180005791754607653}
   - component: {fileID: 7445466450093225861}
   - component: {fileID: 4373020241697042667}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WK_Xtra_quiver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -881,6 +891,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -916,7 +927,7 @@ GameObject:
   - component: {fileID: 2251285510969217867}
   - component: {fileID: 8038570913883689946}
   - component: {fileID: 8732879229193378244}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WK_weapon_hammer_A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -960,6 +971,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -995,7 +1007,7 @@ GameObject:
   - component: {fileID: 269556182935483699}
   - component: {fileID: 860227268784353827}
   - component: {fileID: 7341475623866494720}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WK_Xtra_bag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1038,6 +1050,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1073,7 +1086,7 @@ GameObject:
   - component: {fileID: 8497247411696354888}
   - component: {fileID: 5641282372309963389}
   - component: {fileID: 5775944404018509656}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WK_weapon_staff_A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1116,6 +1129,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1151,7 +1165,7 @@ GameObject:
   - component: {fileID: 3204868320343757478}
   - component: {fileID: 4547300355678705749}
   - component: {fileID: 977596025579422000}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WK_Shield_A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1195,6 +1209,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1230,7 +1245,7 @@ GameObject:
   - component: {fileID: 3039430800168941810}
   - component: {fileID: 8430535742924717847}
   - component: {fileID: 8920820924263403942}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WK_weapon_staff_C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1273,6 +1288,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1306,7 +1322,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8813205869518462010}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Quiver_container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1339,7 +1355,7 @@ GameObject:
   - component: {fileID: 3287301264057869937}
   - component: {fileID: 8054416182912185205}
   - component: {fileID: 8899990271074352932}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WK_weapon_axe_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1383,6 +1399,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1418,7 +1435,7 @@ GameObject:
   - component: {fileID: 6250408957219509831}
   - component: {fileID: 1944667067032676244}
   - component: {fileID: 8980952307368870499}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WK_weapon_hammer_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1462,6 +1479,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1497,7 +1515,7 @@ GameObject:
   - component: {fileID: 5164795256117550894}
   - component: {fileID: 191285942224339028}
   - component: {fileID: 1118273398075859729}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WK_weapon_axe_A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1541,6 +1559,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1575,7 +1594,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7918981313825734025}
   - component: {fileID: 7918981313822911673}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WK_Units_shoulderpads_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1610,6 +1629,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1658,7 +1678,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7918981313825734031}
   - component: {fileID: 7918981313822911679}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WK_Units_shoulderpads_A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1693,6 +1713,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1741,7 +1762,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7918981313825734033}
   - component: {fileID: 7918981313822911669}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WK_Units_head_H
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1776,6 +1797,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1824,7 +1846,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7918981313825734035}
   - component: {fileID: 7918981313822911671}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WK_Units_head_I
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1859,6 +1881,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1907,7 +1930,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7918981313825734037}
   - component: {fileID: 7918981313822911689}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WK_Units_head_F
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1942,6 +1965,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1990,7 +2014,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7918981313825734039}
   - component: {fileID: 7918981313822911691}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WK_Units_head_G
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2025,6 +2049,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2073,7 +2098,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7918981313825734041}
   - component: {fileID: 7918981313822911677}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WK_Units_Legs_C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2108,6 +2133,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2161,7 +2187,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7918981313825734045}
   - component: {fileID: 7918981313822911665}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WK_Units_Legs_A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2196,6 +2222,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2249,7 +2276,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7918981313825734047}
   - component: {fileID: 7918981313822911667}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WK_Units_Legs_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2284,6 +2311,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2336,7 +2364,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7918981313825734051}
   - component: {fileID: 7918981313822911687}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WK_Units_head_A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2371,6 +2399,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2418,7 +2447,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7918981313825734057}
   - component: {fileID: 7918981313822911693}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WK_Units_head_D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2453,6 +2482,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2500,7 +2530,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7918981313825734059}
   - component: {fileID: 7918981313822911695}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WK_Units_head_E
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2535,6 +2565,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2583,7 +2614,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7918981313825734061}
   - component: {fileID: 7918981313822911681}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WK_Units_head_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2618,6 +2649,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2665,7 +2697,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7918981313825734063}
   - component: {fileID: 7918981313822911683}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WK_Units_head_C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2700,6 +2732,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2747,7 +2780,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7918981313825734067}
   - component: {fileID: 7918981313822911709}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WK_Units_Body_A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2782,6 +2815,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2846,7 +2880,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7918981313825734073}
   - component: {fileID: 7918981313822911707}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WK_Units_Body_D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2881,6 +2915,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2943,7 +2978,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7918981313825734075}
   - component: {fileID: 7918981313822911685}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WK_Units_Body_E
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2978,6 +3013,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3040,7 +3076,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7918981313825734077}
   - component: {fileID: 7918981313822911711}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WK_Units_Body_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3075,6 +3111,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3135,7 +3172,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7918981313825734079}
   - component: {fileID: 7918981313822911705}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WK_Units_Body_C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3170,6 +3207,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3229,7 +3267,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7918981313825734081}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone_wood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3261,7 +3299,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7918981313825734083}
   - component: {fileID: 7918981313818726933}
-  m_Layer: 0
+  - component: {fileID: 6928608187755711906}
+  m_Layer: 9
   m_Name: WK_Light_Infantry_A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3316,7 +3355,7 @@ Animator:
   m_GameObject: {fileID: 7918981313826021795}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 635180035812f964db1d9529cbb170f2, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 520be2247f766bc49afe07a219725f11, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3325,6 +3364,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6928608187755711906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7918981313826021795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c55100fe65087946a5943d145aaaebf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7918981313826021797
 GameObject:
   m_ObjectHideFlags: 0
@@ -3334,7 +3385,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7918981313825734085}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3370,7 +3421,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7918981313825734087}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone_bag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3402,7 +3453,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7918981313825734089}
   - component: {fileID: 7918981313822911697}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WK_Units_Arms_C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3437,6 +3488,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3489,7 +3541,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7918981313825734091}
   - component: {fileID: 7918981313822911699}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WK_Units_Arms_D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3524,6 +3576,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3580,7 +3633,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7918981313825734093}
   - component: {fileID: 7918981313822911701}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WK_Units_Arms_A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3615,6 +3668,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3671,7 +3725,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7918981313825734095}
   - component: {fileID: 7918981313822911703}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WK_Units_Arms_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3706,6 +3760,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3757,7 +3812,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7918981313825734097}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 R Forearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3788,7 +3843,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7918981313825734099}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 R Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3819,7 +3874,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7918981313825734101}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 R Clavicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3850,7 +3905,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7918981313825734103}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 R Foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3881,7 +3936,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7918981313825734105}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 R Toe0Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3911,7 +3966,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7918981313825734107}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 R UpperArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3942,7 +3997,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7918981313825734109}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 R Thigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3973,7 +4028,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7918981313825734111}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 R Toe0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4004,7 +4059,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7918981313825734113}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 L Toe0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4035,7 +4090,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7918981313825734115}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 L Toe0Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4065,7 +4120,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7918981313825734117}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 L Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4097,7 +4152,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7918981313825734119}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 L Thigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4128,7 +4183,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7918981313825734121}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 Pelvis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4161,7 +4216,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7918981313825734123}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 R Calf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4192,7 +4247,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7918981313825734125}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 L UpperArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4223,7 +4278,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7918981313825734127}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4254,7 +4309,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7918981313825734129}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4285,7 +4340,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7918981313825734131}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 HeadNub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4315,7 +4370,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7918981313825734133}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4347,7 +4402,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7918981313825734135}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 Footsteps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4377,7 +4432,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7918981313825734137}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 L Foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4408,7 +4463,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7918981313825734139}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 L Forearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4440,7 +4495,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7918981313825734141}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 L Calf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4471,7 +4526,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7918981313825734143}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bip001 L Clavicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4502,7 +4557,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6352805908315465768}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L_hand_container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4536,7 +4591,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8630372430568957282}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L_shield_container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
