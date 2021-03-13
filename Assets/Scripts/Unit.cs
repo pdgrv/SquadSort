@@ -6,11 +6,16 @@ public class Unit : MonoBehaviour
     [SerializeField] private UnitType _type;
     [SerializeField] private float _speed = 5f;
 
+    private Coroutine _movementJob;
+
     public UnitType Type => _type;
 
     public void Move(Vector3 newPosition)
     {
-        StartCoroutine(Movement(newPosition));
+        if (_movementJob != null)
+            StopCoroutine(_movementJob);
+            
+       _movementJob =  StartCoroutine(Movement(newPosition));
     }
 
     private IEnumerator Movement(Vector3 newPosition)
@@ -23,6 +28,7 @@ public class Unit : MonoBehaviour
         }
 
         transform.position = newPosition;
+        _movementJob = null;
     }
 }
 
