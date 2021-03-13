@@ -42,9 +42,9 @@ public class SquadsContainer : MonoBehaviour
         {
             Squad targetSquad = LastSquad;
 
-            if (IsEnoughCapacity(fromSquad)) // переместить внутрь
+            if (fromSquad.UnitsType == targetSquad.UnitsType)
             {
-                if (fromSquad.UnitsType == targetSquad.UnitsType)
+                if (IsEnoughCapacity(fromSquad))
                 {
                     MoveSquadUnits(fromSquad, targetSquad);
                     targetSquad.Combine(fromSquad);
@@ -57,17 +57,18 @@ public class SquadsContainer : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("отряды контейнеров не сопадают, выбрать новый контейнер");
-                    return true;
+                    Debug.Log(name + " не может вместить столько юнитов");
+                    FocusBad();
+
+                    return false;
                 }
             }
             else
             {
-                Debug.Log(name + " не может вместить столько юнитов");
-                FocusBad();
-
-                return false;
+                Debug.Log("отряды контейнеров не сопадают, выбрать новый контейнер");
+                return true;
             }
+
         }
     }
 
