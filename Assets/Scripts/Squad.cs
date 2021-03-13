@@ -7,7 +7,6 @@ public class Squad : MonoBehaviour
 {
     [SerializeField] private int _fullSquadCount = 4;
     [SerializeField] private List<Unit> _units;
-    [SerializeField] private SortingContainer _currentContainer;
 
     public event UnityAction SquadFulled;
 
@@ -17,10 +16,33 @@ public class Squad : MonoBehaviour
 
     private void OnValidate()
     {
-        CheckSquadUnits();
+        CheckEqualsUnitsType();
     }
 
-    private void CheckSquadUnits()
+    public void Combine(Squad fromSquad)
+    {
+        _units.AddRange(fromSquad._units);
+
+        if (UnitsCount >= _fullSquadCount)
+            SquadFulled?.Invoke();
+    }
+
+    public void MoveSquad(Squad targetSquad, Vector3 targetSquadPosition)
+    {
+        for (int i = 0; i < _units.Count; i++)
+        {
+            _units[i].transform.parent = targetSquad.transform;
+            _units[i].Move(new Vector3(0, 0, i) + targetSquadPosition);
+        }
+    }
+
+    public void ClearSquad()
+    {
+        _units.Clear();
+        gameObject.SetActive(false);
+    }
+
+    private void CheckEqualsUnitsType()
     {
         if (_units != null)
         {
@@ -31,36 +53,6 @@ public class Squad : MonoBehaviour
                     _units.Remove(unit);
                 }
             }
-        }
-    }
-
-    public void PushSquadFrom(Squad departingSquad)
-    {
-        _units.AddRange(departingSquad.GetUnits());
-
-        RenderSquad();
-
-        if (UnitsCount >= _fullSquadCount)
-            SquadFulled?.Invoke();
-    }
-
-    public void ClearSquad()
-    {
-        _units.Clear();
-        gameObject.SetActive(false);
-    }
-
-    public List<Unit> GetUnits()
-    {
-        return _units;
-    }
-
-    private void RenderSquad()
-    {
-        for (int i = 0; i < _units.Count; i++)
-        {
-            _units[i].transform.parent = transform;
-            _units[i].transform.localPosition = new Vector3(0, 0, i);
         }
     }
 }
