@@ -33,10 +33,10 @@ public class PlayerActions : MonoBehaviour
                         }
                         else
                         {
-                            if (targetContainer.TryInteract(_currentContainer))
-                                SelectCurrentContainer(targetContainer);
-                            else
+                            if (targetContainer.TryMoveSquad(_currentContainer))
                                 UnselectCurrentContainer();
+                            else
+                                SelectCurrentContainer(targetContainer);
                         }
                     }
                 }
@@ -57,6 +57,5 @@ public class PlayerActions : MonoBehaviour
     {
         _currentContainer.FocusOff();
         _currentContainer = null;
-
     }
 }

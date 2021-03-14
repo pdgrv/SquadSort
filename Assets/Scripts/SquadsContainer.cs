@@ -25,7 +25,7 @@ public class SquadsContainer : MonoBehaviour
     {
     }
 
-    public bool TryInteract(SquadsContainer fromContainer) // не нравится название и что возвращает bool isNewSelect
+    public bool TryMoveSquad(SquadsContainer fromContainer) // не нравится что возвращает bool !isNewSelect
     {
         Squad fromSquad = fromContainer.LastSquad;
 
@@ -35,8 +35,6 @@ public class SquadsContainer : MonoBehaviour
             AddSquad(fromSquad);
 
             fromContainer.RemoveSquad(fromSquad);
-
-            return false;
         }
         else
         {
@@ -53,23 +51,21 @@ public class SquadsContainer : MonoBehaviour
                     fromSquad.ClearSquad();
 
                     Debug.Log("отряд из " + fromContainer.name + " совмещаем с " + name);
-                    return false;
                 }
                 else
                 {
                     Debug.Log(name + " не может вместить столько юнитов");
                     FocusBad();
-
-                    return false;
                 }
             }
             else
             {
                 Debug.Log("отряды контейнеров не сопадают, выбрать новый контейнер");
-                return true;
+                return false;
             }
-
         }
+
+        return true;
     }
 
     private void MoveSquadUnits(Squad fromSquad, Squad targetSquad)
@@ -96,12 +92,13 @@ public class SquadsContainer : MonoBehaviour
 
     public void FocusOn()
     {
-
+        LastSquad.SelectSquad();
     }
 
     public void FocusOff()
     {
-
+        if (!IsFree)
+            LastSquad.UnselectSquad();
     }
 
     public void FocusBad()

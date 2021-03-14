@@ -27,8 +27,26 @@ public class Squad : MonoBehaviour
             SquadFulled?.Invoke();
     }
 
+    public void SelectSquad()
+    {
+        for (int i = 0; i < _units.Count; i++)
+        {
+            _units[i].Select();
+        }
+    }
+
+    public void UnselectSquad()
+    {
+        for (int i = 0; i < _units.Count; i++)
+        {
+            _units[i].Unselect();
+        }
+    }
+
     public void MoveSquad(Squad targetSquad, Vector3 targetSquadPosition)
     {
+        UnselectSquad();
+
         for (int i = 0; i < _units.Count; i++)
         {
             _units[i].transform.parent = targetSquad.transform;
@@ -48,7 +66,8 @@ public class Squad : MonoBehaviour
         {
             foreach (Unit unit in _units)
             {
-                if (unit.Type != UnitsType) { 
+                if (unit.Type != UnitsType)
+                {
                     Debug.Log("Разные юниты в скваде!");
                     _units.Remove(unit);
                 }
