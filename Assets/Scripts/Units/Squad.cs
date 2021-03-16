@@ -24,7 +24,7 @@ public class Squad : MonoBehaviour
         _units.AddRange(fromSquad._units);
 
         if (UnitsCount >= _fullSquadCount)
-            SquadFulled?.Invoke();
+            CompleteSquad();
     }
 
     public void SelectSquad()
@@ -58,6 +58,16 @@ public class Squad : MonoBehaviour
     {
         _units.Clear();
         gameObject.SetActive(false);
+    }
+
+    private void CompleteSquad()
+    {
+        SquadFulled?.Invoke();
+
+        for (int i = 0; i < _units.Count; i++)
+        {
+            _units[i].EnterCombatStance();
+        }
     }
 
     private void CheckEqualsUnitsType()

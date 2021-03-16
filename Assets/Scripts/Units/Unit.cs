@@ -40,6 +40,11 @@ public class Unit : MonoBehaviour
         _animator.SetBool("LookUp", false);
     }
 
+    public void EnterCombatStance()
+    {
+        _animator.SetBool("CombatStance", true);
+    }
+
     private IEnumerator Movement(Vector3 newPosition)
     {
         _animator.SetBool("Run", true);
@@ -50,7 +55,7 @@ public class Unit : MonoBehaviour
         {
             transform.position = Vector3.MoveTowards(transform.position, newPosition, Time.deltaTime * _speed);
 
-            yield return new WaitForFixedUpdate();
+            yield return null;
         }
 
         transform.LookAt(transform.position + Vector3.forward);
