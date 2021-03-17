@@ -7,7 +7,7 @@ public abstract class CombatUnit : MonoBehaviour
 {
     [SerializeField] private int _health = 1;
     [SerializeField] private int _damage = 1;
-    [SerializeField] protected float AttackDistance = 3;
+    [SerializeField] protected float AttackDistance = 1.5f;
     [SerializeField] private float _attackDelay = 1f;
     [SerializeField] protected float MoveSpeed = 4;
 
@@ -23,16 +23,26 @@ public abstract class CombatUnit : MonoBehaviour
         Animator = GetComponent<Animator>();
     }
 
+    private void LateUpdate()
+    {
+        if (!IsAlive)
+        {
+            if (TryGetComponent(out Collider collider))
+                collider.enabled = false;
+            enabled = false;
+        }
+    }
+
     public virtual void Attack(CombatUnit target)
     {
         transform.LookAt(target.transform.position);
 
-        if (LastAttackTimer > _attackDelay)
+        if (LastAttackTimer < 0f)
         {
             target.ApplyDamage(_damage);
             Animator.SetTrigger("Attack");
 
-            LastAttackTimer = 0f;
+            LastAttackTimer = _attackDelay;
         }
     }
 

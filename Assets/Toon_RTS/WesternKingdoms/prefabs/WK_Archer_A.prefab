@@ -1739,6 +1739,8 @@ GameObject:
   - component: {fileID: 3447711905649036547}
   - component: {fileID: 7801432530177593513}
   - component: {fileID: 694197569}
+  - component: {fileID: 1351548167271590457}
+  - component: {fileID: 6583397724304340326}
   m_Layer: 9
   m_Name: WK_Archer_A
   m_TagString: Untagged
@@ -1815,7 +1817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c55100fe65087946a5943d145aaaebf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _type: 1
+  _type: 2
   _speed: 4
 --- !u!114 &694197569
 MonoBehaviour:
@@ -1829,11 +1831,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bae3301082f7504a9111da04ad4144f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 1
+  _health: 2
   _damage: 1
-  AttackDistance: 1
-  _attackDelay: 1
+  AttackDistance: 9
+  _attackDelay: 1.5
   MoveSpeed: 1
+--- !u!136 &1351548167271590457
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3447711905656471221}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  m_Radius: 0.3
+  m_Height: 1.5
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.75, z: 0}
+--- !u!54 &6583397724304340326
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3447711905656471221}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 5
+  m_AngularDrag: 5
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 84
+  m_CollisionDetection: 0
 --- !u!1 &3447711905656471223
 GameObject:
   m_ObjectHideFlags: 0
@@ -2279,7 +2311,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3447711905656471235}
   m_LocalRotation: {x: -0.50000036, y: 0.49999964, z: 0.49999964, w: 0.50000036}
-  m_LocalPosition: {x: 0, y: 0.73484915, z: -0.049094923}
+  m_LocalPosition: {x: 0, y: 0.73484915, z: -0.049095154}
   m_LocalScale: {x: 0.9999999, y: 0.9999999, z: 0.99999994}
   m_Children:
   - {fileID: 3447711905656759009}
@@ -2713,7 +2745,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3447711905656471263}
   m_LocalRotation: {x: -0.53784674, y: 0.44721583, z: 0.5562739, w: 0.44864056}
-  m_LocalPosition: {x: -0.016273206, y: -0.023685243, z: -0.022543728}
+  m_LocalPosition: {x: -0.016273467, y: -0.023685291, z: -0.022543728}
   m_LocalScale: {x: 1, y: 0.99999994, z: 0.99999994}
   m_Children:
   - {fileID: 3447711905656759025}

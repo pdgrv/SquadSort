@@ -2584,7 +2584,7 @@ MonoBehaviour:
   _damage: 1
   AttackDistance: 2
   _attackDelay: 2
-  MoveSpeed: 5
+  MoveSpeed: 3
 --- !u!136 &1848276494
 CapsuleCollider:
   m_ObjectHideFlags: 0

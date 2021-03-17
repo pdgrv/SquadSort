@@ -13,7 +13,7 @@ public class Zombie : CombatUnit
 
     private void Update()
     {
-        LastAttackTimer += Time.deltaTime;
+        LastAttackTimer -= Time.deltaTime;
 
         if (CurrentTarget == null)
             return;
@@ -23,6 +23,7 @@ public class Zombie : CombatUnit
             if (Vector3.Distance(transform.position, CurrentTarget.transform.position) > AttackDistance)
             {
                 Animator.SetBool("Run", true);
+                Animator.ResetTrigger("Attack");
                 Move(CurrentTarget);
             }
             else

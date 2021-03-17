@@ -71,7 +71,7 @@ public class Unit : MonoBehaviour
 
 public enum UnitType
 {
+    Knight,
     Soldier,
-    Archer,
-    Knight
+    Archer
 }

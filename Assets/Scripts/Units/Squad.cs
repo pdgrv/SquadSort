@@ -21,8 +21,14 @@ public class Squad : MonoBehaviour
 
     public void Combine(Squad fromSquad)
     {
-        _units.AddRange(fromSquad._units);
+        for (int i = 0; i < fromSquad.UnitsCount; i++)
+        {
+            _units.Add(fromSquad._units[i]);
+        }
+    }
 
+    public void CheckCompleteSquad()
+    {
         if (UnitsCount >= _fullSquadCount)
             CompleteSquad();
     }
@@ -43,14 +49,14 @@ public class Squad : MonoBehaviour
         }
     }
 
-    public void MoveSquad(Squad targetSquad, Vector3 targetSquadPosition)
+    public void MoveSquad(Squad targetSquad, Vector3 targetSquadPosition, Vector2 orientation)
     {
         UnselectSquad();
 
         for (int i = 0; i < _units.Count; i++)
         {
             _units[i].transform.parent = targetSquad.transform;
-            _units[i].Move(new Vector3(0, 0, i) + targetSquadPosition);
+            _units[i].Move(new Vector3(orientation.x, 0, orientation.y) * (i) + targetSquadPosition);
         }
     }
 
@@ -70,14 +76,15 @@ public class Squad : MonoBehaviour
         return combatUnits;
     }
 
+
     private void CompleteSquad()
     {
-        SquadFulled?.Invoke();
-
         for (int i = 0; i < _units.Count; i++)
         {
             _units[i].EnterCombatStance();
         }
+
+        SquadFulled?.Invoke();
     }
 
     private void CheckEqualsUnitsType()

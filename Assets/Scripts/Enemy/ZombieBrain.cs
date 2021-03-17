@@ -6,7 +6,8 @@ public class ZombieBrain : MonoBehaviour
 {
     [SerializeField] private Zombie[] _zombies;
 
-    private List<CombatUnit> _units = new List<CombatUnit>();
+    [SerializeField]private List<Squad> _aliveSquads = new List<Squad>();
+    [SerializeField]private List<CombatUnit> _frontUnits = new List<CombatUnit>();
 
     private void Awake()
     {
@@ -15,14 +16,14 @@ public class ZombieBrain : MonoBehaviour
 
     public void StartInvasion(List<Squad> squads)
     {
-        foreach (Squad squad in squads)
-        {
-            _units.AddRange(squad.GetCombatUnits());
-        }
+        _aliveSquads = squads;
+
+        _frontUnits.AddRange(_aliveSquads[0].GetCombatUnits());
+        _aliveSquads.RemoveAt(0);
 
         foreach (Zombie zombie in _zombies)
         {
-            zombie.SetTarget(_units[Random.Range(0, _units.Count)]);
+            zombie.SetTarget(_frontUnits[Random.Range(0, _frontUnits.Count)]);
         }
     }
 
@@ -30,19 +31,30 @@ public class ZombieBrain : MonoBehaviour
     {
         List<CombatUnit> unitsAlive = new List<CombatUnit>();
 
-        foreach (CombatUnit unit in _units)
+        foreach (CombatUnit unit in _frontUnits)
         {
             if (unit.IsAlive)
                 unitsAlive.Add(unit);
         }
 
-        _units = unitsAlive;
+        if (unitsAlive.Count <= 0)
+        {
+            if (_aliveSquads.Count > 0)
+            {
+                _frontUnits.AddRange(_aliveSquads[0].GetCombatUnits());
+                _aliveSquads.RemoveAt(0);
+            }
+        }
+        else
+        {
+            _frontUnits = unitsAlive;
+        }
     }
 
     public CombatUnit GetRandomUnit()
     {
         UpdateUnits();
 
-        return _units.Count > 0 ? _units[Random.Range(0, _units.Count)] : null;
+        return _frontUnits.Count > 0 ? _frontUnits[Random.Range(0, _frontUnits.Count)] : null;
     }
 }

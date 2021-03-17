@@ -50,6 +50,8 @@ public class SquadsContainer : MonoBehaviour
                     fromSquad.ClearSquad();
                     fromContainer.RemoveSquad(fromSquad);
 
+                    targetSquad.CheckCompleteSquad();
+
                     Debug.Log("отряд из " + fromContainer.name + " совмещаем с " + name);
                 }
                 else
@@ -72,7 +74,7 @@ public class SquadsContainer : MonoBehaviour
     {
         Vector3 targetSquadPosition = transform.position - new Vector3(0, 0, 1.5f) + new Vector3(0, 0, _unitZStep) * TotalUnits;
 
-        fromSquad.MoveSquad(targetSquad, targetSquadPosition);
+        fromSquad.MoveSquad(targetSquad, targetSquadPosition, new Vector2(0, 1));
     }
 
     private void AddSquad(Squad squad)
