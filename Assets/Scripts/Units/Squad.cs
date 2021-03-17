@@ -60,6 +60,16 @@ public class Squad : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    public List<CombatUnit> GetCombatUnits()
+    {
+        List<CombatUnit> combatUnits = new List<CombatUnit>();
+
+        foreach (Unit unit in _units)
+            combatUnits.Add(unit.CombatUnit);
+
+        return combatUnits;
+    }
+
     private void CompleteSquad()
     {
         SquadFulled?.Invoke();

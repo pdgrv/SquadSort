@@ -47,8 +47,8 @@ public class SquadsContainer : MonoBehaviour
                     MoveSquadUnits(fromSquad, targetSquad);
                     targetSquad.Combine(fromSquad);
 
-                    fromContainer.RemoveSquad(fromSquad);
                     fromSquad.ClearSquad();
+                    fromContainer.RemoveSquad(fromSquad);
 
                     Debug.Log("отряд из " + fromContainer.name + " совмещаем с " + name);
                 }

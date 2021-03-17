@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 465828}
   - component: {fileID: 9518618}
   - component: {fileID: 2317402366305180545}
+  - component: {fileID: 1730903969}
+  - component: {fileID: 6872671481547295057}
   m_Layer: 9
   m_Name: TZ_M_zombie_21
   m_TagString: Untagged
@@ -44,10 +46,10 @@ Animator:
   m_GameObject: {fileID: 104058}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 95ae7538d5bba3b408e45c304eb4df7b, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cb1547a0298e68e4fa4c9e056238a8a3, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -65,6 +67,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c29917c38292b204a9a3c4d5ccd914c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _health: 6
+  _damage: 4
+  AttackDistance: 2
+  _attackDelay: 3
+  MoveSpeed: 5
+--- !u!136 &1730903969
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104058}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.25
+  m_Height: 1.5
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.75, z: 0}
+--- !u!54 &6872671481547295057
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104058}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 5
+  m_AngularDrag: 5
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 84
+  m_CollisionDetection: 0
 --- !u!1 &105806
 GameObject:
   m_ObjectHideFlags: 0

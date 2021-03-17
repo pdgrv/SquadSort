@@ -1,21 +1,25 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+[RequireComponent(typeof(Animator))]
 public class Unit : MonoBehaviour
 {
     [SerializeField] private UnitType _type;
     [SerializeField] private float _speed = 5f;
 
     private Animator _animator;
-    private Vector3 _lookAtPlayer;
+    private CombatUnit _combatUnit;
 
+    private Vector3 _lookAtPlayer;
     private Coroutine _movementJob;
 
+    public CombatUnit CombatUnit => _combatUnit;
     public UnitType Type => _type;
 
     private void Awake()
     {
         _animator = GetComponent<Animator>();
+        _combatUnit = GetComponent<CombatUnit>();
         _lookAtPlayer = Camera.main.transform.position;
         _lookAtPlayer.y = transform.position.y;
     }

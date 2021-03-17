@@ -7,9 +7,9 @@ public class Game : MonoBehaviour
 {
     [SerializeField] private int _totalSquads;
     [SerializeField] private List<Squad> _squads;
+    [SerializeField] private ZombieBrain _zombieBrain;
 
     private int _totalFulledSquads = 0;
-
 
     private void Awake()
     {
@@ -34,6 +34,7 @@ public class Game : MonoBehaviour
     private void OnSquadFulled()
     {
         _totalFulledSquads++;
+
         if (_totalFulledSquads >= _totalSquads)
             SortingComplete();
     }
@@ -41,6 +42,20 @@ public class Game : MonoBehaviour
     private void SortingComplete()
     {
         Debug.Log("Сортировка закончена!");
+
+        StartBattle();
     }
 
+    private void StartBattle()
+    {
+        List<Squad> completedSquads = new List<Squad>();
+
+        foreach (Squad squad in _squads)
+        {
+            if (squad.gameObject.activeSelf)
+                completedSquads.Add(squad);
+        }
+
+        _zombieBrain.StartInvasion(completedSquads);
+    }
 }
