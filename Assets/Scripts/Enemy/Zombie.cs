@@ -1,10 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Zombie : CombatUnit
 {
+    public event UnityAction<Zombie> ZombieDied;
+
     private ZombieBrain _brain;
+
+    private int DieID = 0;
+    private const int DieMaxID = 2;
 
     private void Start()
     {
@@ -42,5 +48,16 @@ public class Zombie : CombatUnit
     private void FindNewTarget()
     {
         CurrentTarget = _brain.GetRandomUnit();
+    }
+
+    protected override void Die()
+    {
+        base.Die();
+
+        DieID = Random.Range(0, DieMaxID + 1);
+
+        Animator.SetInteger("DieID", DieID);
+
+        ZombieDied?.Invoke(this);
     }
 }

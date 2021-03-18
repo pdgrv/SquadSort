@@ -8,11 +8,15 @@ public class Squad : MonoBehaviour
     [SerializeField] private int _fullSquadCount = 4;
     [SerializeField] private List<Unit> _units;
 
+    private List<CombatUnit> _combatUnits = new List<CombatUnit>();
+
     public event UnityAction SquadFulled;
 
     public UnitType UnitsType => _units[0].Type;
 
     public int UnitsCount => _units.Count;
+
+    public List<CombatUnit> CombatUnits => _combatUnits;
 
     private void OnValidate()
     {
@@ -66,16 +70,16 @@ public class Squad : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    public List<CombatUnit> GetCombatUnits()
+    public void Celebrate()
     {
-        List<CombatUnit> combatUnits = new List<CombatUnit>();
-
-        foreach (Unit unit in _units)
-            combatUnits.Add(unit.CombatUnit);
-
-        return combatUnits;
+        foreach (CombatUnit unit in _combatUnits)
+        {
+            if (unit.IsAlive)
+            {
+                unit.CelebrateWictory();
+            }
+        }
     }
-
 
     private void CompleteSquad()
     {
@@ -83,6 +87,8 @@ public class Squad : MonoBehaviour
         {
             _units[i].EnterCombatStance();
         }
+
+        SetCombatUnits();
 
         SquadFulled?.Invoke();
     }
@@ -100,5 +106,11 @@ public class Squad : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void SetCombatUnits()
+    {
+        foreach (Unit unit in _units)
+            _combatUnits.Add(unit.CombatUnit);
     }
 }

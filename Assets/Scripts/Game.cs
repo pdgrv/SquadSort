@@ -10,6 +10,7 @@ public class Game : MonoBehaviour
     [SerializeField] private List<Squad> _squads;
     [SerializeField] private ZombieBrain _zombieBrain;
     [SerializeField] private CameraController _cameraController;
+    [SerializeField] private Animation _castleDoorsAnimation;
 
     private ReloadScene _debugReloadScene;
 
@@ -32,13 +33,19 @@ public class Game : MonoBehaviour
         {
             squad.SquadFulled += OnSquadFulled;
         }
+
+        _zombieBrain.AllZombieKilled += OnAllZombieKilled;
     }
+
+
     private void OnDisable()
     {
         foreach (Squad squad in _squads)
         {
             squad.SquadFulled -= OnSquadFulled;
         }
+
+        _zombieBrain.AllZombieKilled -= OnAllZombieKilled;
     }
 
     private void OnSquadFulled()
@@ -72,6 +79,7 @@ public class Game : MonoBehaviour
         BuildRanks(completedSquads);
 
         _cameraController.ActivateCombatMode();
+        _castleDoorsAnimation.Play();
 
         _zombieBrain.StartInvasion(completedSquads);
     }
@@ -88,8 +96,19 @@ public class Game : MonoBehaviour
         }
     }
 
-    public void CompleteBattle()
+    private void CompleteBattle()
     {
         _debugReloadScene.enabled = true;
+    }
+
+    private void OnAllZombieKilled()
+    {
+        CompleteBattle();
+
+        foreach (Squad squad in _squads)
+        {
+            if (squad.enabled)
+                squad.Celebrate();
+        }
     }
 }

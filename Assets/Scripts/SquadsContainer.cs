@@ -7,6 +7,8 @@ public class SquadsContainer : MonoBehaviour
     [SerializeField] private List<Squad> _currentSquads;
     [SerializeField] private float _unitZStep = 1f;
 
+    private Animation _animation;
+
     public bool IsFree => _currentSquads.Count == 0 ? true : false;
     private Squad LastSquad => _currentSquads[_currentSquads.Count - 1];
 
@@ -19,6 +21,11 @@ public class SquadsContainer : MonoBehaviour
                 value += squad.UnitsCount;
             return value;
         }
+    }
+
+    private void Awake()
+    {
+        _animation = GetComponent<Animation>();
     }
 
     private void OnValidate()
@@ -105,6 +112,6 @@ public class SquadsContainer : MonoBehaviour
 
     public void FocusBad()
     {
-
+        _animation.Play();
     }
 }

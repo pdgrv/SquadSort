@@ -72,7 +72,12 @@ public abstract class CombatUnit : MonoBehaviour
         CurrentTarget = target;
     }
 
-    private void Die()
+    public void CelebrateWictory()
+    {
+        Animator.SetTrigger("Celebrate");
+    }
+
+    protected virtual void Die()
     {
         Animator.SetTrigger("Die");
     }
