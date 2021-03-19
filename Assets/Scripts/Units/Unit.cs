@@ -47,6 +47,8 @@ public class Unit : MonoBehaviour
     public void EnterCombatStance()
     {
         _animator.SetBool("CombatStance", true);
+
+        _combatUnit.UnitEffects.CompleteUnit();
     }
 
     private IEnumerator Movement(Vector3 newPosition)

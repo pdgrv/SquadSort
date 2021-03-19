@@ -60,10 +60,10 @@ public class Game : MonoBehaviour
     {
         Debug.Log("Сортировка закончена!");
 
-        StartBattle();
+        StartCoroutine(StartBattle());
     }
 
-    private void StartBattle()
+    private IEnumerator StartBattle()
     {
         foreach (SquadsContainer container in _containers)
             container.gameObject.SetActive(false);
@@ -75,6 +75,8 @@ public class Game : MonoBehaviour
             if (squad.gameObject.activeSelf)
                 completedSquads.Add(squad);
         }
+
+        yield return new WaitForSeconds(1.5f);
 
         BuildRanks(completedSquads);
 

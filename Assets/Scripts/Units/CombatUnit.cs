@@ -7,9 +7,15 @@ public abstract class CombatUnit : MonoBehaviour
 {
     [SerializeField] private int _health = 1;
     [SerializeField] private int _damage = 1;
+    [SerializeField] protected float DamageAnticipationTimer;
     [SerializeField] protected float AttackDistance = 1.5f;
     [SerializeField] private float _attackDelay = 1f;
     [SerializeField] protected float MoveSpeed = 4;
+    [SerializeField] public UnitEffects UnitEffects;//для complete unit  
+    [SerializeField] private float _rotationSpeed = 10f;
+
+    [SerializeField] private int _attackMaxID = 0;
+    [SerializeField] private int _dieMaxID = 0;
 
     protected Animator Animator;
     protected CombatUnit CurrentTarget;
@@ -35,29 +41,25 @@ public abstract class CombatUnit : MonoBehaviour
 
     public virtual void Attack(CombatUnit target)
     {
-        transform.LookAt(target.transform.position);
+        //transform.LookAt(target.transform.position);
+        LookDirection(target.transform.position-transform.position);
 
         if (LastAttackTimer < 0f)
         {
-            target.ApplyDamage(_damage);
+            target.ApplyDamage(_damage, DamageAnticipationTimer);
+            LastAttackTimer = _attackDelay;
+
+            int AttackID = Random.Range(0, _attackMaxID + 1);
+            Animator.SetInteger("AttackID", AttackID);
             Animator.SetTrigger("Attack");
 
-            LastAttackTimer = _attackDelay;
+            UnitEffects.Attack();
         }
     }
 
-    public virtual void ApplyDamage(int damage)
+    public void ApplyDamage(int damage, float timer)
     {
-        if (_health - damage > 0)
-        {
-            Animator.SetTrigger("ApplyDamage");
-            _health -= damage;
-        }
-        else
-        {
-            _health = 0;
-            Die();
-        }
+        StartCoroutine(ApplyDamageTimer(damage, timer));
     }
 
     public virtual void Move(CombatUnit target)
@@ -74,11 +76,53 @@ public abstract class CombatUnit : MonoBehaviour
 
     public void CelebrateWictory()
     {
+        Animator.ResetTrigger("Attack");
         Animator.SetTrigger("Celebrate");
     }
 
-    protected virtual void Die()
+    protected virtual void Die(bool isBoss = false) //что-то тут не чисто
     {
+        int DieID = Random.Range(0, _dieMaxID + 1);
+
+        if (isBoss)
+            Animator.SetInteger("DieID", _dieMaxID);
+        else
+            Animator.SetInteger("DieID", DieID);
+
         Animator.SetTrigger("Die");
+
+        UnitEffects.Die();
     }
+
+    private IEnumerator ApplyDamageTimer(int damage, float timer)
+    {
+        yield return new WaitForSeconds(timer);
+
+        if (_health > damage)
+        {
+            _health -= damage;
+
+            Animator.SetTrigger("ApplyDamage");
+            UnitEffects.ApplyDamage();
+        }
+        else if (_health >= 1 )  //чтото тут не чисто
+        {
+            _health = 0;
+            Die();
+        }
+    }
+
+    private void LookDirection(Vector3 direction)
+    {
+        if (direction.magnitude < 0.05f)
+            return;
+
+        Quaternion lookRotation = Quaternion.LookRotation(direction);
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, _rotationSpeed * Time.deltaTime);
+    }
+
+    //void SmoothLook(Vector3 newDirection)
+    //{
+    //    transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(newDirection), _rotationSpeed * Time.deltaTime);
+    //}
 }

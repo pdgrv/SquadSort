@@ -10,6 +10,7 @@ public class ZombieBrain : MonoBehaviour
 
     [SerializeField] private List<Squad> _aliveSquads = new List<Squad>();
     [SerializeField] private List<CombatUnit> _frontUnits = new List<CombatUnit>();
+    [SerializeField] private int _deadZombiesFillrate;
 
     public event UnityAction AllZombieKilled;
 
@@ -84,5 +85,10 @@ public class ZombieBrain : MonoBehaviour
 
         if (_zombies.Count <= 0)
             AllZombieKilled?.Invoke();
+
+        if (!zombie.IsBoss && Random.Range(0,100) > _deadZombiesFillrate)
+        {
+            zombie.Hide();
+        }
     }
 }

@@ -10,11 +10,12 @@ public class InfantryUnit : CombatUnit
 
     private void FixedUpdate()
     {
-        Collider[] enemies = Physics.OverlapSphere(transform.position, AttackDistance);
+        Collider[] enemies = Physics.OverlapSphere(transform.position, AttackDistance); //дубляж кода с ArcheryUnit
 
         if (CurrentTarget == null)
         {
-            CurrentTarget = enemies[Random.Range(0, enemies.Length)].GetComponent<CombatUnit>();
+            if (enemies.Length > 0 && enemies[Random.Range(0, enemies.Length)].TryGetComponent(out CombatUnit currentTarget))
+                CurrentTarget = currentTarget;
         }
         else if (!CurrentTarget.IsAlive)
         {
