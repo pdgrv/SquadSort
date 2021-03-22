@@ -7,6 +7,7 @@ public class Squad : MonoBehaviour
 {
     [SerializeField] private int _fullSquadCount = 4;
     [SerializeField] private List<Unit> _units;
+    [SerializeField] private Animation _completedSquadFX;
 
     private List<CombatUnit> _combatUnits = new List<CombatUnit>();
 
@@ -90,7 +91,16 @@ public class Squad : MonoBehaviour
 
         SetCombatUnits();
 
+        if (_completedSquadFX != null)
+            _completedSquadFX.Play();
+
         SquadFulled?.Invoke();
+    }
+
+    private void SetCombatUnits()
+    {
+        foreach (Unit unit in _units)
+            _combatUnits.Add(unit.CombatUnit);
     }
 
     private void CheckEqualsUnitsType()
@@ -108,9 +118,4 @@ public class Squad : MonoBehaviour
         }
     }
 
-    private void SetCombatUnits()
-    {
-        foreach (Unit unit in _units)
-            _combatUnits.Add(unit.CombatUnit);
-    }
 }

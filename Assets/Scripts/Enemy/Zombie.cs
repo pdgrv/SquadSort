@@ -50,6 +50,7 @@ public class Zombie : CombatUnit
     {
         StartCoroutine(HideJob());
     }
+
     private IEnumerator HideJob() // не чисто
     {
         yield return new WaitForSeconds(3f);
@@ -71,6 +72,9 @@ public class Zombie : CombatUnit
     protected override void Die(bool isBoss = false)
     {
         base.Die(_isBoss);
+
+        if (TryGetComponent(out Collider collider))
+            collider.enabled = false;
 
         ZombieDied?.Invoke(this);
     }

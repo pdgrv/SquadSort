@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class SquadsContainer : MonoBehaviour
@@ -7,7 +8,15 @@ public class SquadsContainer : MonoBehaviour
     [SerializeField] private List<Squad> _currentSquads;
     [SerializeField] private float _unitZStep = 1f;
 
+    [SerializeField] private Color _baseColor;
+    [SerializeField] private Color _selectedColor;
+    [SerializeField] private Color _completedColor;
+    [SerializeField] private Color _badColor;
+
     private Animation _animation;
+    private Material _material;
+
+    private Coroutine _changeColorJob;
 
     public bool IsFree => _currentSquads.Count == 0 ? true : false;
     private Squad LastSquad => _currentSquads[_currentSquads.Count - 1];
@@ -26,10 +35,7 @@ public class SquadsContainer : MonoBehaviour
     private void Awake()
     {
         _animation = GetComponent<Animation>();
-    }
-
-    private void OnValidate()
-    {
+        _material = GetComponent<MeshRenderer>().material;
     }
 
     public bool TryMoveSquad(SquadsContainer fromContainer) // не нравится что возвращает bool !isNewSelect
@@ -70,9 +76,12 @@ public class SquadsContainer : MonoBehaviour
             else
             {
                 Debug.Log("отряды контейнеров не сопадают, выбрать новый контейнер");
-                return false;
+                FocusBad();
             }
         }
+
+        if (_currentSquads.Count == 1 && _currentSquads[0].UnitsCount == _maxUnits)
+            ChangeColor(_completedColor);
 
         return true;
     }
@@ -102,16 +111,55 @@ public class SquadsContainer : MonoBehaviour
     public void FocusOn()
     {
         LastSquad.SelectSquad();
+
+        ChangeColor(_selectedColor);
     }
 
     public void FocusOff()
     {
         if (!IsFree)
             LastSquad.UnselectSquad();
+
+        //_material.SetColor("_Color", _baseColor);
+        ChangeColor(_baseColor);
     }
 
     public void FocusBad()
     {
-        _animation.Play();
+        StartCoroutine(ChangingColorLoop(_badColor));
+    }
+
+    private void ChangeColor(Color targetColor)
+    {
+        if (_changeColorJob != null)
+            StopCoroutine(_changeColorJob);
+
+        _changeColorJob = StartCoroutine(ChangingColor(targetColor));
+    }
+
+    private IEnumerator ChangingColorLoop(Color targetColor)
+    {
+        if (_changeColorJob != null)
+            StopCoroutine(_changeColorJob);
+
+        _changeColorJob = StartCoroutine(ChangingColor(targetColor));
+        yield return _changeColorJob;
+        _changeColorJob = StartCoroutine(ChangingColor(_baseColor));
+    }
+
+    private IEnumerator ChangingColor(Color targetColor)
+    {
+        Color color = _material.color;
+
+        float time = 0;
+
+        while (time < 1)
+        {
+            _material.color = Color.Lerp(color, targetColor, time);
+            time += Time.deltaTime / 0.3f;
+            yield return null;
+        }
+
+        _changeColorJob = null;
     }
 }

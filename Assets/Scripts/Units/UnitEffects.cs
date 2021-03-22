@@ -9,6 +9,9 @@ public class UnitEffects : MonoBehaviour
     [SerializeField] private List<ParticleSystem> _applyDamageFX;
     [SerializeField] private int _applyDamageFXChance = 30;
     [SerializeField] private List<ParticleSystem> _dieFX;
+
+    [Header("SortingFX")]
+    [SerializeField] private ParticleSystem _selectedUnitFX;
     [SerializeField] private ParticleSystem _completedUnitFX;
 
     public void Attack()
@@ -16,7 +19,7 @@ public class UnitEffects : MonoBehaviour
         if (_attackFX == null)
             return;
 
-        if (Random.Range(0, 100) < _applyDamageFXChance)
+        if (Random.Range(0, 100) < _attackFXChance)
         {
             _attackFX.Play();
         }
@@ -38,5 +41,15 @@ public class UnitEffects : MonoBehaviour
     public void CompleteUnit()
     {
         _completedUnitFX.Play();
+    }
+
+    public void SelectUnit()
+    {
+        _selectedUnitFX.Play();
+    }
+
+    public void UnselectUnit()
+    {
+        _selectedUnitFX.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
     }
 }

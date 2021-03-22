@@ -12,7 +12,7 @@ public abstract class CombatUnit : MonoBehaviour
     [SerializeField] private float _attackDelay = 1f;
     [SerializeField] protected float MoveSpeed = 4;
     [SerializeField] public UnitEffects UnitEffects;//для complete unit  
-    [SerializeField] private float _rotationSpeed = 10f;
+    [SerializeField] private float _rotationSpeed = 5f;
 
     [SerializeField] private int _attackMaxID = 0;
     [SerializeField] private int _dieMaxID = 0;
@@ -27,16 +27,6 @@ public abstract class CombatUnit : MonoBehaviour
     private void Awake()
     {
         Animator = GetComponent<Animator>();
-    }
-
-    private void LateUpdate()
-    {
-        if (!IsAlive)
-        {
-            if (TryGetComponent(out Collider collider))
-                collider.enabled = false;
-            enabled = false;
-        }
     }
 
     public virtual void Attack(CombatUnit target)
@@ -62,9 +52,10 @@ public abstract class CombatUnit : MonoBehaviour
         StartCoroutine(ApplyDamageTimer(damage, timer));
     }
 
-    public virtual void Move(CombatUnit target)
+    public virtual void Move(CombatUnit target) //используется сейчас только в зомби.
     {
-        transform.LookAt(target.transform.position);
+        //transform.LookAt(target.transform.position);
+        LookDirection(target.transform.position - transform.position);
 
         transform.position = Vector3.MoveTowards(transform.position, target.transform.position, Time.deltaTime * MoveSpeed);
     }
@@ -92,6 +83,8 @@ public abstract class CombatUnit : MonoBehaviour
         Animator.SetTrigger("Die");
 
         UnitEffects.Die();
+
+        enabled = false;
     }
 
     private IEnumerator ApplyDamageTimer(int damage, float timer)
@@ -120,9 +113,4 @@ public abstract class CombatUnit : MonoBehaviour
         Quaternion lookRotation = Quaternion.LookRotation(direction);
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, _rotationSpeed * Time.deltaTime);
     }
-
-    //void SmoothLook(Vector3 newDirection)
-    //{
-    //    transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(newDirection), _rotationSpeed * Time.deltaTime);
-    //}
 }

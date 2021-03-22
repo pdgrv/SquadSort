@@ -50,7 +50,8 @@ MonoBehaviour:
   _attackFXChance: 50
   _applyDamageFX:
   - {fileID: 3755213606687516191}
-  _applyDamageFXChance: 30
+  - {fileID: 4988369442465702717}
+  _applyDamageFXChance: 35
   _dieFX:
   - {fileID: 4988369442465702717}
   - {fileID: 2283918709613199162}

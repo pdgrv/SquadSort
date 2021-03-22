@@ -6,7 +6,7 @@ public class ArcherUnit : CombatUnit
 {
     [SerializeField] private Arrow _arrow;
 
-    private const float _arrowSpeedMultiplier = 3f;
+    private const float _arrowSpeedMultiplier = 1.2f;
 
     private void Update()
     {

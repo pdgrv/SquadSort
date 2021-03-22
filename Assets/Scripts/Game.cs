@@ -65,6 +65,8 @@ public class Game : MonoBehaviour
 
     private IEnumerator StartBattle()
     {
+        yield return new WaitForSeconds(2f);
+
         foreach (SquadsContainer container in _containers)
             container.gameObject.SetActive(false);
 
@@ -76,7 +78,7 @@ public class Game : MonoBehaviour
                 completedSquads.Add(squad);
         }
 
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.5f);
 
         BuildRanks(completedSquads);
 
