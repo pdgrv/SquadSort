@@ -6,8 +6,6 @@ public class PlayerActions : MonoBehaviour
 
     private void Update()
     {
-        Time.timeScale = 1f;
-
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);

@@ -3433,7 +3433,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _health: 6
   _damage: 2
-  DamageAnticipationTimer: 0.3
+  DamageAnticipationTimer: 0.4
   AttackDistance: 1.7
   _attackDelay: 0.7
   MoveSpeed: 2
@@ -4920,7 +4920,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 19875798, guid: 6b5cdea243db4bc4b9498aae2aa4c103, type: 3}
       propertyPath: startDelay.scalar
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 19875798, guid: 6b5cdea243db4bc4b9498aae2aa4c103, type: 3}
       propertyPath: playOnAwake
@@ -4928,7 +4928,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 19877172, guid: 6b5cdea243db4bc4b9498aae2aa4c103, type: 3}
       propertyPath: startDelay.scalar
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 19877172, guid: 6b5cdea243db4bc4b9498aae2aa4c103, type: 3}
       propertyPath: playOnAwake
@@ -4936,10 +4936,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 19888532, guid: 6b5cdea243db4bc4b9498aae2aa4c103, type: 3}
       propertyPath: startDelay.scalar
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 19888532, guid: 6b5cdea243db4bc4b9498aae2aa4c103, type: 3}
       propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19932212, guid: 6b5cdea243db4bc4b9498aae2aa4c103, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19932212, guid: 6b5cdea243db4bc4b9498aae2aa4c103, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19940534, guid: 6b5cdea243db4bc4b9498aae2aa4c103, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19940534, guid: 6b5cdea243db4bc4b9498aae2aa4c103, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19984166, guid: 6b5cdea243db4bc4b9498aae2aa4c103, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19984166, guid: 6b5cdea243db4bc4b9498aae2aa4c103, type: 3}
+      propertyPath: m_ReceiveShadows
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

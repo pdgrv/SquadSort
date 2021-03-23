@@ -58,7 +58,7 @@ public class ZombieBrain : MonoBehaviour
                 unitsAlive.Add(unit);
         }
 
-        if (unitsAlive.Count <= 0)
+        if (unitsAlive.Count <= 1)
         {
             if (_aliveSquads.Count > 0)
             {
@@ -86,7 +86,7 @@ public class ZombieBrain : MonoBehaviour
         if (_zombies.Count <= 0)
             AllZombieKilled?.Invoke();
 
-        if (!zombie.IsBoss && Random.Range(0,100) > _deadZombiesFillrate)
+        if (Random.Range(0,100) > _deadZombiesFillrate)
         {
             zombie.Hide();
         }

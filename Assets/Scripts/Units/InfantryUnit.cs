@@ -3,14 +3,10 @@ using UnityEngine;
 
 public class InfantryUnit : CombatUnit
 {
-    private void Update()
-    {
-        LastAttackTimer -= Time.deltaTime;
-    }
-
     private void FixedUpdate()
     {
         Collider[] enemies = Physics.OverlapSphere(transform.position, AttackDistance); //дубляж кода с ArcheryUnit
+        LastAttackTimer -= Time.deltaTime;
 
         if (CurrentTarget == null)
         {

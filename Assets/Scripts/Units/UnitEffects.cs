@@ -21,7 +21,7 @@ public class UnitEffects : MonoBehaviour
 
         if (Random.Range(0, 100) < _attackFXChance)
         {
-            _attackFX.Play();
+            _attackFX.Play(); //задержка в самом эффекте
         }
     }
 

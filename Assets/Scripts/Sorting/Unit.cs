@@ -15,6 +15,7 @@ public class Unit : MonoBehaviour
     private Coroutine _movementJob;
     private Coroutine _lookAtJob;
 
+    public Coroutine MovementJob => _movementJob;
     public CombatUnit CombatUnit => _combatUnit;
     public UnitType Type => _type;
 
@@ -36,7 +37,6 @@ public class Unit : MonoBehaviour
 
     public void Select()
     {
-        //transform.LookAt(_lookAtPlayer);
         LookAt(_lookAtPlayer);
         _animator.SetBool("LookUp", true);
 
@@ -45,7 +45,6 @@ public class Unit : MonoBehaviour
 
     public void Unselect()
     {
-        //transform.LookAt(transform.position + Vector3.forward);
         LookAt(transform.position + Vector3.forward);
         _animator.SetBool("LookUp", false);
 
@@ -64,7 +63,6 @@ public class Unit : MonoBehaviour
     {
         _animator.SetBool("Run", true);
 
-        //transform.LookAt(new Vector3(newPosition.x, transform.position.y, newPosition.z));
         LookAt(new Vector3(newPosition.x, transform.position.y, newPosition.z));
 
         while (Vector3.Distance(transform.position, newPosition) > 0.1f)
@@ -77,7 +75,6 @@ public class Unit : MonoBehaviour
         transform.position = newPosition;
         _animator.SetBool("Run", false);
 
-        //transform.LookAt(transform.position + Vector3.forward);
         LookAt(transform.position + Vector3.forward);
 
         _movementJob = null;

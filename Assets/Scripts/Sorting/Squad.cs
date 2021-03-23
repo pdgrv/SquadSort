@@ -30,12 +30,14 @@ public class Squad : MonoBehaviour
         {
             _units.Add(fromSquad._units[i]);
         }
+
+        CheckCompleteSquad();
     }
 
-    public void CheckCompleteSquad()
+    private void CheckCompleteSquad()
     {
         if (UnitsCount >= _fullSquadCount)
-            CompleteSquad();
+            StartCoroutine(CompleteSquad());
     }
 
     public void SelectSquad()
@@ -82,19 +84,25 @@ public class Squad : MonoBehaviour
         }
     }
 
-    private void CompleteSquad()
+    private IEnumerator CompleteSquad()
     {
+        SetCombatUnits();
+        SquadFulled?.Invoke();
+
+        if (_completedSquadFX != null)
+            _completedSquadFX.Play(); //уже с таймером
+
+        yield return new WaitForFixedUpdate();
+
+        for (int i = 0; i < _units.Count; i++)
+        {
+            yield return _units[i].MovementJob;
+        }
+
         for (int i = 0; i < _units.Count; i++)
         {
             _units[i].EnterCombatStance();
         }
-
-        SetCombatUnits();
-
-        if (_completedSquadFX != null)
-            _completedSquadFX.Play();
-
-        SquadFulled?.Invoke();
     }
 
     private void SetCombatUnits()
@@ -117,5 +125,4 @@ public class Squad : MonoBehaviour
             }
         }
     }
-
 }
