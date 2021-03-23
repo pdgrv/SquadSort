@@ -8326,7 +8326,7 @@ GameObject:
   - component: {fileID: 503409057}
   - component: {fileID: 503409056}
   - component: {fileID: 503409055}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18268,8 +18268,8 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.7216981, g: 0.9688773, b: 1, a: 1}
-  m_Intensity: 0.7
+  m_Color: {r: 0.7783019, g: 0.97501993, b: 1, a: 1}
+  m_Intensity: 0.8
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
