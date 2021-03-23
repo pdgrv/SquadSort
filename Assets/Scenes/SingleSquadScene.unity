@@ -263,7 +263,7 @@ Transform:
   - {fileID: 1521794703}
   - {fileID: 1538789317}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2794620 stripped
 Transform:
@@ -618,7 +618,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &192611044
 MonoBehaviour:
@@ -2980,7 +2980,7 @@ GameObject:
   - component: {fileID: 344809418}
   - component: {fileID: 344809417}
   - component: {fileID: 344809416}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ZombieGateTurnerR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3112,7 +3112,7 @@ GameObject:
   - component: {fileID: 344007643}
   - component: {fileID: 345063237}
   - component: {fileID: 64964722511508795}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SM_Bld_Castle_Tower_Wall_Top_01_Lite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6171,7 +6171,7 @@ Transform:
   - {fileID: 2053076544}
   - {fileID: 954009828}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &372217877
 MonoBehaviour:
@@ -8402,11 +8402,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 503409054}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 6, y: 1, z: 8}
+  m_LocalPosition: {x: 0, y: 0, z: 12}
+  m_LocalScale: {x: 6, y: 1, z: 6}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &507342187
 PrefabInstance:
@@ -11479,7 +11479,7 @@ Transform:
   - {fileID: 1360890832}
   - {fileID: 868818042}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &629608929
 MonoBehaviour:
@@ -11616,7 +11616,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &670680352
 PrefabInstance:
@@ -12779,7 +12779,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 715760350}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ---WALLS---
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12807,7 +12807,7 @@ Transform:
   - {fileID: 1771404615}
   - {fileID: 344809415}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &721751252 stripped
 Transform:
@@ -16460,7 +16460,7 @@ Transform:
   m_Children:
   - {fileID: 726224565}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &975154211
 PrefabInstance:
@@ -17234,7 +17234,7 @@ Transform:
   m_Children:
   - {fileID: 1172592945}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &979688927 stripped
 Transform:
@@ -20426,7 +20426,7 @@ GameObject:
   - component: {fileID: 1141644761}
   - component: {fileID: 1144641701}
   - component: {fileID: 1143496127}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SM_Bld_Castle_Tower_Mini_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21736,7 +21736,7 @@ GameObject:
   - component: {fileID: 1228524833}
   - component: {fileID: 1227807821}
   - component: {fileID: 1225310304}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SM_Bld_Castle_Wall_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21863,7 +21863,7 @@ Transform:
   - {fileID: 1470102679}
   - {fileID: 724701846}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1235176868
 MonoBehaviour:
@@ -22027,7 +22027,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1321096266 stripped
 MonoBehaviour:
@@ -22300,7 +22300,7 @@ GameObject:
   - component: {fileID: 1438383819}
   - component: {fileID: 1437327957}
   - component: {fileID: 64964723598174251}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SM_Bld_Castle_Tower_Wall_Top_01_Lite (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22481,7 +22481,7 @@ Transform:
   - {fileID: 670958588}
   - {fileID: 772131750}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1461305429
 MonoBehaviour:
@@ -26780,7 +26780,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1508535682
 PrefabInstance:
@@ -27808,7 +27808,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1518721193
 MeshFilter:
@@ -28887,7 +28887,7 @@ GameObject:
   - component: {fileID: 1518721193}
   - component: {fileID: 1519672755}
   - component: {fileID: 64072960743385347}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SM_Bld_Castle_Tower_Mini_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28922,7 +28922,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1531080921 stripped
 Transform:
@@ -30724,7 +30724,7 @@ Transform:
   m_Children:
   - {fileID: 1735711870}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1633555574 stripped
 Transform:
@@ -31002,7 +31002,7 @@ GameObject:
   - component: {fileID: 1771404618}
   - component: {fileID: 1771404617}
   - component: {fileID: 1771404616}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ZombieGateTurnerL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31122,7 +31122,7 @@ Transform:
   - {fileID: 69179685}
   - {fileID: 1633555574}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1806567716 stripped
 Transform:
@@ -33340,7 +33340,7 @@ GameObject:
   - component: {fileID: 1951029104}
   - component: {fileID: 1952269852}
   - component: {fileID: 1954241039}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SM_Bld_Castle_Wall_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40781,6 +40781,8 @@ GameObject:
   - component: {fileID: 2077356660}
   - component: {fileID: 486218664}
   - component: {fileID: 6872671482162834776}
+  - component: {fileID: 2077356662}
+  - component: {fileID: 2077356661}
   m_Layer: 9
   m_Name: TZ_M_zombie_21
   m_TagString: Untagged
@@ -40810,6 +40812,43 @@ MonoBehaviour:
   _rotationSpeed: 5
   _attackMaxID: 1
   _dieMaxID: 2
+--- !u!114 &2077356661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2077356659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09c87c81c2c8fcf439f6a5bdde294c75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _moveSpeed: 3
+  _rotationSpeed: 3
+  _stoppingDistance: 1.5
+--- !u!195 &2077356662
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2077356659}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 10
+  avoidancePriority: 50
+  m_AngularSpeed: 160
+  m_StoppingDistance: 2
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1.5
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 3
 --- !u!1 &2077358407
 GameObject:
   m_ObjectHideFlags: 0
@@ -50871,6 +50910,66 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!1 &2117438713
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2117438715}
+  - component: {fileID: 2117438714}
+  m_Layer: 0
+  m_Name: NavMeshSurface
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2117438714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2117438713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 3328
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 23800000, guid: 319f2f20e3f68344fb75bb041d718c6f, type: 2}
+--- !u!4 &2117438715
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2117438713}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2134015831
 Transform:
   m_ObjectHideFlags: 0
