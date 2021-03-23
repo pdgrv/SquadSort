@@ -5,13 +5,9 @@ using UnityEngine.Events;
 
 public class Zombie : CombatUnit
 {
-    [SerializeField] private bool _isBoss = false;
-
     public event UnityAction<Zombie> ZombieDied;
 
     private ZombieBrain _brain;
-
-    public bool IsBoss => _isBoss;
 
     private void Start()
     {
@@ -46,18 +42,18 @@ public class Zombie : CombatUnit
         }
     }
 
-    public void Hide()
+    public virtual void Hide()
     {
-        StartCoroutine(HideJob());
+        StartCoroutine(Hiding());
     }
 
-    private IEnumerator HideJob() // не чисто
+    private IEnumerator Hiding()
     {
         yield return new WaitForSeconds(3f);
 
         while (transform.position.y > -5)
         {
-            transform.Translate(Vector3.down * Time.deltaTime);
+            transform.Translate(Vector3.down * Time.deltaTime * 0.5f);
             yield return new WaitForFixedUpdate();
         }
 
@@ -69,13 +65,18 @@ public class Zombie : CombatUnit
         CurrentTarget = _brain.GetRandomUnit();
     }
 
-    protected override void Die(bool isBoss = false)
+    protected override void Die()
     {
-        base.Die(_isBoss);
+        base.Die();
 
         if (TryGetComponent(out Collider collider))
             collider.enabled = false;
 
+        RaiseZombieDiedEvent();
+    }
+
+    protected void RaiseZombieDiedEvent()
+    {
         ZombieDied?.Invoke(this);
     }
 }

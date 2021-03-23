@@ -29,10 +29,9 @@ public abstract class CombatUnit : MonoBehaviour
         Animator = GetComponent<Animator>();
     }
 
-    public virtual void Attack(CombatUnit target)
+    protected virtual void Attack(CombatUnit target)
     {
-        //transform.LookAt(target.transform.position);
-        LookDirection(target.transform.position-transform.position);
+        LookDirection(target.transform.position - transform.position);
 
         if (LastAttackTimer < 0f)
         {
@@ -52,9 +51,8 @@ public abstract class CombatUnit : MonoBehaviour
         StartCoroutine(ApplyDamageTimer(damage, timer));
     }
 
-    public virtual void Move(CombatUnit target) //используется сейчас только в зомби.
+    protected virtual void Move(CombatUnit target) //используется сейчас только в зомби.
     {
-        //transform.LookAt(target.transform.position);
         LookDirection(target.transform.position - transform.position);
 
         transform.position = Vector3.MoveTowards(transform.position, target.transform.position, Time.deltaTime * MoveSpeed);
@@ -71,15 +69,11 @@ public abstract class CombatUnit : MonoBehaviour
         Animator.SetTrigger("Celebrate");
     }
 
-    protected virtual void Die(bool isBoss = false) //что-то тут не чисто
+    protected virtual void Die() //что-то тут не чисто
     {
         int DieID = Random.Range(0, _dieMaxID + 1);
 
-        if (isBoss)
-            Animator.SetInteger("DieID", _dieMaxID);
-        else
-            Animator.SetInteger("DieID", DieID);
-
+        Animator.SetInteger("DieID", DieID);
         Animator.SetTrigger("Die");
 
         UnitEffects.Die();
@@ -98,7 +92,7 @@ public abstract class CombatUnit : MonoBehaviour
             Animator.SetTrigger("ApplyDamage");
             UnitEffects.ApplyDamage();
         }
-        else if (_health >= 1 )  //чтото тут не чисто
+        else if (_health > 0)
         {
             _health = 0;
             Die();

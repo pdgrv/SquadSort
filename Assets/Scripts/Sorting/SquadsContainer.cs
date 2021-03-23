@@ -13,7 +13,6 @@ public class SquadsContainer : MonoBehaviour
     [SerializeField] private Color _completedColor;
     [SerializeField] private Color _badColor;
 
-    private Animation _animation;
     private Material _material;
 
     private Coroutine _changeColorJob;
@@ -34,7 +33,6 @@ public class SquadsContainer : MonoBehaviour
 
     private void Awake()
     {
-        _animation = GetComponent<Animation>();
         _material = GetComponent<MeshRenderer>().material;
     }
 
@@ -62,8 +60,6 @@ public class SquadsContainer : MonoBehaviour
 
                     fromSquad.ClearSquad();
                     fromContainer.RemoveSquad(fromSquad);
-
-                    targetSquad.CheckCompleteSquad();
 
                     Debug.Log("отряд из " + fromContainer.name + " совмещаем с " + name);
                 }
@@ -126,7 +122,7 @@ public class SquadsContainer : MonoBehaviour
 
     public void FocusBad()
     {
-        StartCoroutine(ChangingColorLoop(_badColor));
+        StartCoroutine(FlashingColor(_badColor));
     }
 
     private void ChangeColor(Color targetColor)
@@ -137,7 +133,7 @@ public class SquadsContainer : MonoBehaviour
         _changeColorJob = StartCoroutine(ChangingColor(targetColor));
     }
 
-    private IEnumerator ChangingColorLoop(Color targetColor)
+    private IEnumerator FlashingColor(Color targetColor)
     {
         if (_changeColorJob != null)
             StopCoroutine(_changeColorJob);
