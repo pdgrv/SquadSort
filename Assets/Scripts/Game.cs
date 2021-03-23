@@ -92,11 +92,11 @@ public class Game : MonoBehaviour
     {
         squads.Sort((x, y) => ((int)x.UnitsType).CompareTo((int)y.UnitsType));
 
-        float targetPosX = 6f / (squads[1].UnitsCount + 1) - 3f; //6f - примерная ширина камеры
+        //float targetPosX = 6f / (squads[1].UnitsCount + 1) - 3f; //6f - примерная ширина камеры
 
         for (int i = 0; i < squads.Count; i++)
         {
-            squads[i].MoveSquad(squads[i], new Vector3(-1.8f, 0, 4f - i * 1.5f), new Vector2(1.2f, 0f));
+            squads[i].MoveSquad(squads[i], new Vector3(-2.4f, 0, 4f - i * 1.6f), new Vector2(1.4f, 0f)); //magic
         }
     }
 
