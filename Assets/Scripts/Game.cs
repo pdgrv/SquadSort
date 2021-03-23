@@ -83,7 +83,7 @@ public class Game : MonoBehaviour
         BuildRanks(completedSquads);
 
         _cameraController.ActivateCombatMode();
-        _castleDoorsAnimation.Play();
+        _castleDoorsAnimation.Play(); //тайминг в анимации
 
         _zombieBrain.StartInvasion(completedSquads);
     }
