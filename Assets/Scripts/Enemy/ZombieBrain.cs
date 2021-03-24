@@ -46,6 +46,8 @@ public class ZombieBrain : MonoBehaviour
         {
             zombie.SetTarget(_frontUnits[Random.Range(0, _frontUnits.Count)]);
         }
+
+        ZombieAudio.Instance.UpdateZombieCount(_zombies.Count);
     }
 
     private void UpdateUnits()
@@ -90,5 +92,7 @@ public class ZombieBrain : MonoBehaviour
         {
             zombie.Hide();
         }
+
+        ZombieAudio.Instance.UpdateZombieCount(_zombies.Count);
     }
 }

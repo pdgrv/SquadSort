@@ -13,6 +13,7 @@ public class Game : MonoBehaviour
     [SerializeField] private Animation _castleDoorsAnimation;
 
     private ReloadScene _debugReloadScene;
+    private BackgroundMusic _backgroundMusic;
 
     private List<SquadsContainer> _containers = new List<SquadsContainer>();
 
@@ -22,6 +23,7 @@ public class Game : MonoBehaviour
     {
         _squads.AddRange(FindObjectsOfType<Squad>());
         _containers.AddRange(FindObjectsOfType<SquadsContainer>());
+        _backgroundMusic = FindObjectOfType<BackgroundMusic>();
 
         _debugReloadScene = GetComponent<ReloadScene>();
         _debugReloadScene.enabled = false;
@@ -65,6 +67,7 @@ public class Game : MonoBehaviour
 
     private IEnumerator StartBattle()
     {
+        _backgroundMusic.StartBattle();
         yield return new WaitForSeconds(2f);
 
         foreach (SquadsContainer container in _containers)
@@ -103,6 +106,9 @@ public class Game : MonoBehaviour
     private void CompleteBattle()
     {
         _debugReloadScene.enabled = true;
+
+        UnitsAudio.Instance.Celebate();
+        _backgroundMusic.SortingMusic();
     }
 
     private void OnAllZombieKilled()

@@ -3978,7 +3978,7 @@ MonoBehaviour:
   _rotationSpeed: 3
   _attackMaxID: 2
   _dieMaxID: 2
-  _isBoss: 0
+  _voiceTimer: 2
 --- !u!136 &357788628
 CapsuleCollider:
   m_ObjectHideFlags: 0

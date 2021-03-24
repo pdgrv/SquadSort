@@ -24,4 +24,9 @@ public class ArcherUnit : InfantryUnit
             _arrow.Shoot(CurrentTarget);
         }
     }
+
+    protected override void AttackSound()
+    {
+        UnitsAudio.Instance.Shoot();
+    }
 }

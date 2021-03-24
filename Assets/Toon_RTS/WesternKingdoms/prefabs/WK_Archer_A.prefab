@@ -11447,6 +11447,7 @@ MonoBehaviour:
   _type: 2
   _speed: 4
   _unitEffects: {fileID: 3243145983642195944}
+  _unitAudio: {fileID: 0}
 --- !u!114 &694197569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11466,6 +11467,7 @@ MonoBehaviour:
   _attackDelay: 1.5
   MoveSpeed: 1
   UnitEffects: {fileID: 3243145983642195944}
+  UnitsAudio: {fileID: 0}
   _rotationSpeed: 5
   _attackMaxID: 0
   _dieMaxID: 0

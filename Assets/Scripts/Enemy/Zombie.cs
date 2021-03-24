@@ -79,4 +79,19 @@ public class Zombie : CombatUnit
     {
         ZombieDied?.Invoke(this);
     }
+
+    protected override void AttackSound()
+    {
+        ZombieAudio.Instance.Attack();
+    }
+
+    protected override void ApplyDamageSound()
+    {
+        ZombieAudio.Instance.ApplyDamage();
+    }
+
+    protected override void DiedSound()
+    {
+        ZombieAudio.Instance.Die();
+    }
 }

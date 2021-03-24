@@ -87,6 +87,8 @@ public class SquadsContainer : MonoBehaviour
         Vector3 targetSquadPosition = transform.position - new Vector3(0, 0, 1.5f) + new Vector3(0, 0, _unitZStep) * TotalUnits;
 
         fromSquad.MoveSquad(targetSquad, targetSquadPosition, new Vector2(0, 1));
+
+        UnitsAudio.Instance.Agreement();
     }
 
     private void AddSquad(Squad squad)
@@ -109,6 +111,8 @@ public class SquadsContainer : MonoBehaviour
         LastSquad.SelectSquad();
 
         ChangeColor(_selectedColor);
+
+        UnitsAudio.Instance.Select();
     }
 
     public void FocusOff()
@@ -123,6 +127,8 @@ public class SquadsContainer : MonoBehaviour
     public void FocusBad()
     {
         StartCoroutine(FlashingColor(_badColor));
+
+        UnitsAudio.Instance.Disagreement();
     }
 
     private void ChangeColor(Color targetColor)
