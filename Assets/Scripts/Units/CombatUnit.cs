@@ -11,7 +11,7 @@ public abstract class CombatUnit : MonoBehaviour
     [SerializeField] protected float AttackDistance = 1.5f;
     [SerializeField] private float _attackDelay = 1f;
     [SerializeField] protected float MoveSpeed = 4;
-    [SerializeField] public UnitEffects UnitEffects;//для complete unit  
+    [SerializeField] protected UnitEffects UnitEffects;
     [SerializeField] private float _rotationSpeed = 5f;
 
     [SerializeField] private int _attackMaxID = 0;
@@ -62,6 +62,8 @@ public abstract class CombatUnit : MonoBehaviour
             Animator.SetTrigger("Attack");
 
             UnitEffects.Attack();
+
+            AttackSound();
         }
     }
 
@@ -83,6 +85,7 @@ public abstract class CombatUnit : MonoBehaviour
         Animator.SetTrigger("Die");
 
         UnitEffects.Die();
+        DiedSound();
 
         enabled = false;
         _movement.enabled = false;
@@ -98,6 +101,7 @@ public abstract class CombatUnit : MonoBehaviour
 
             Animator.SetTrigger("ApplyDamage");
             UnitEffects.ApplyDamage();
+            ApplyDamageSound();
         }
         else if (_health > 0)
         {
@@ -105,6 +109,12 @@ public abstract class CombatUnit : MonoBehaviour
             Die();
         }
     }
+
+    protected abstract void AttackSound();
+
+    protected abstract void ApplyDamageSound();
+
+    protected abstract void DiedSound();
 
     private void LookDirection(Vector3 direction)
     {
@@ -114,4 +124,5 @@ public abstract class CombatUnit : MonoBehaviour
         Quaternion lookRotation = Quaternion.LookRotation(direction);
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, _rotationSpeed * Time.deltaTime);
     }
+
 }

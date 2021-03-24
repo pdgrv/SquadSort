@@ -103,6 +103,8 @@ public class Squad : MonoBehaviour
         {
             _units[i].EnterCombatStance();
         }
+
+        UnitsAudio.Instance.Complete();
     }
 
     private void SetCombatUnits()

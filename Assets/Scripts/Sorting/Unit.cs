@@ -49,14 +49,13 @@ public class Unit : MonoBehaviour
         LookAt(_lookAtPlayer);
         _animator.SetBool("LookUp", true);
 
-        _unitEffects.SelectUnit();
+        _unitEffects.Select();
     }
 
     public void Unselect()
     {
         LookAt(transform.position + Vector3.forward);
         _animator.SetBool("LookUp", false);
-
 
         _unitEffects.UnselectUnit();
     }
@@ -65,7 +64,7 @@ public class Unit : MonoBehaviour
     {
         _animator.SetBool("CombatStance", true);
 
-        _unitEffects.CompleteUnit();
+        _unitEffects.Complete();
     }
 
     private IEnumerator Movement(Vector3 newPosition)

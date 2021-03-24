@@ -3,6 +3,21 @@ using UnityEngine;
 
 public class InfantryUnit : CombatUnit
 {
+    protected override void ApplyDamageSound()
+    {
+        UnitsAudio.Instance.ApplyDamage();
+    }
+
+    protected override void AttackSound()
+    {
+        UnitsAudio.Instance.Attack();
+    }
+
+    protected override void DiedSound()
+    {
+        UnitsAudio.Instance.Die();
+    }
+
     private void FixedUpdate()
     {
         Collider[] enemies = Physics.OverlapSphere(transform.position, AttackDistance);

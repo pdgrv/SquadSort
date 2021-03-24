@@ -38,12 +38,12 @@ public class UnitEffects : MonoBehaviour
         _dieFX[Random.Range(0, _dieFX.Count)].Play();
     }
 
-    public void CompleteUnit()
+    public void Complete()
     {
         _completedUnitFX.Play();
     }
 
-    public void SelectUnit()
+    public void Select()
     {
         _selectedUnitFX.Play();
     }
