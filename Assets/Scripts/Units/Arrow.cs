@@ -37,6 +37,7 @@ public class Arrow : MonoBehaviour
             {
                 _isFly = false;
                 _impactFX.Play();
+                UnitsAudio.Instance.BowHit();
 
                 _arrow.SetActive(false);
             }

@@ -11,12 +11,12 @@ public class DoorDestroy : Audio
 
     public void SmallHit()
     {
-        PlayOneShot(_smallHit);
+        PlayOneShot(_smallHit, volumeScale:0.9f);
     }
 
     public void BigHit()
     {
-        PlayOneShot(_bigHit);
+        PlayOneShot(_bigHit, volumeScale:0.85f);
     }
 
     public void Fall()

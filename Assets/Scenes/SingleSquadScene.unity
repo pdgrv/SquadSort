@@ -26726,14 +26726,15 @@ MonoBehaviour:
   _whooshDelay: 0.1
   _celebrate: {fileID: 8300000, guid: f7f934f171cc7f742b8f358cb26b197a, type: 3}
   _swordsAttack:
-  - {fileID: 8300000, guid: 635e63d3ea04f80469b11fc96d0fe961, type: 3}
-  - {fileID: 8300000, guid: 7a4980a3099ea694c97c698d25328e74, type: 3}
+  - {fileID: 8300000, guid: ea7bae9a709b1584a849bdf77f5539f4, type: 3}
   _attackSoundChance: 4
   _bowShoot: {fileID: 8300000, guid: cd0963a1c61a2454ea319b76673f32fd, type: 3}
-  _bowShootSoundChance: 50
+  _bowShootSoundChance: 30
   _applyDamage: {fileID: 8300000, guid: 977c02deff2614d45816509ccad7488a, type: 3}
   _applyDamageSoundChance: 5
   _die: {fileID: 8300000, guid: 565695e697bb0c44085b1ab671de2341, type: 3}
+  _bowHit: {fileID: 8300000, guid: e97658e3de04263409fa3fb50ff10c8d, type: 3}
+  _bowHitChance: 30
 --- !u!1001 &1508535682
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31385,10 +31386,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _voices:
-  - {fileID: 8300000, guid: cb43ffdeacac80048b51895a818d8d48, type: 3}
+  - {fileID: 8300000, guid: ecc0fbb77d33f8a43a07dea5e57583a5, type: 3}
   - {fileID: 8300000, guid: 5cde0603fdd079e48bce30cc9317db86, type: 3}
-  - {fileID: 8300000, guid: 4d9d6099fcc30ad4483b843f5a43c09a, type: 3}
-  _averageVoiceTimer: 30
+  - {fileID: 8300000, guid: cb43ffdeacac80048b51895a818d8d48, type: 3}
+  - {fileID: 8300000, guid: ecc0fbb77d33f8a43a07dea5e57583a5, type: 3}
+  _averageVoiceTimer: 25
   _attacks:
   - {fileID: 8300000, guid: 3799becfce8951643a52c0f476982fa0, type: 3}
   - {fileID: 8300000, guid: 4d9d6099fcc30ad4483b843f5a43c09a, type: 3}
