@@ -10,7 +10,6 @@ public class Game : MonoBehaviour
     [SerializeField] private List<Squad> _squads;
     [SerializeField] private ZombieBrain _zombieBrain;
     [SerializeField] private CameraController _cameraController;
-    [SerializeField] private Animation _castleDoorsAnimation;
 
     private ReloadScene _debugReloadScene;
     private BackgroundMusic _backgroundMusic;
@@ -27,8 +26,6 @@ public class Game : MonoBehaviour
 
         _debugReloadScene = GetComponent<ReloadScene>();
         _debugReloadScene.enabled = false;
-
-        Time.timeScale = 0.5f;
     }
 
     private void OnEnable()
@@ -88,7 +85,6 @@ public class Game : MonoBehaviour
         BuildRanks(completedSquads);
 
         _cameraController.ActivateCombatMode();
-        _castleDoorsAnimation.Play(); //тайминг в анимации
 
         _zombieBrain.StartInvasion(completedSquads);
     }

@@ -10,24 +10,37 @@ public class UnitMovement : MonoBehaviour
     [SerializeField] private float _rotationSpeed = 3f;
     [SerializeField] private float _stoppingDistance = 1.5f;
 
+    private Animator _animator;
+
     private NavMeshAgent _agent;
 
     private Vector3 _targetPosition;
 
-    public bool IsMooving { get; private set; }
+    public bool IsMooving { get; private set; } = false;
 
     private void Awake()
     {
         _agent = GetComponent<NavMeshAgent>();
+        _animator = GetComponent<Animator>();
     }
-
-    private void Update()
-    {
-    }
-
     private void OnDisable()
     {
         _agent.enabled = false;
+    }
+
+    private void FixedUpdate()
+    {
+        if (_agent.remainingDistance > 0.02f)
+        {
+            IsMooving = true;
+        }
+        else if (IsMooving)
+        {
+            IsMooving = false;
+
+        }
+
+        _animator.SetBool("Run", IsMooving);
     }
 
     public void Move(Vector3 targetPoint)
@@ -37,9 +50,6 @@ public class UnitMovement : MonoBehaviour
 
     private void LookDirection(Vector3 direction)
     {
-        if (direction.magnitude < 0.05f)
-            return;
-
         Quaternion lookRotation = Quaternion.LookRotation(direction);
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, _rotationSpeed * Time.deltaTime);
     }

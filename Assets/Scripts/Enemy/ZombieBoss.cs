@@ -15,7 +15,7 @@ public class ZombieBoss : Zombie
             collider.enabled = false;
 
         enabled = false;
-        _movement.enabled = false;
+        //_movement.enabled = false;
 
         RaiseZombieDiedEvent();
     }

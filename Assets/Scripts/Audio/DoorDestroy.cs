@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DoorDestroy : Audio
 {
+    [SerializeField] private Animation _castleDoorsAnimation;
     [SerializeField] private AudioClip _smallHit;
     [SerializeField] private AudioClip _bigHit;
     [SerializeField] private AudioClip _fall;
@@ -20,7 +21,15 @@ public class DoorDestroy : Audio
 
     public void Fall()
     {
-        AudioSource.volume = 0.8f;
-        PlayOneShot(_fall);
+        PlayOneShot(_fall, volumeScale: 0.8f);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.TryGetComponent(out ZombieBoss boss))
+        {
+            _castleDoorsAnimation.Play();
+            GetComponent<Collider>().enabled = false;
+        }
     }
 }

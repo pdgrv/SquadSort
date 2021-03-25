@@ -7,7 +7,7 @@ public class Unit : MonoBehaviour
     [SerializeField] private UnitType _type;
     [SerializeField] private float _speed = 5f;
     [SerializeField] private UnitEffects _unitEffects;
-    
+
     private UnitMovement _movement;
 
     private Animator _animator;
@@ -28,7 +28,7 @@ public class Unit : MonoBehaviour
         _lookAtPlayer = Camera.main.transform.position;
         _lookAtPlayer.y = transform.position.y;
 
-        _movement = GetComponent<UnitMovement>(); 
+        _movement = GetComponent<UnitMovement>();
     }
 
     //public void Move(Vector3 newPosition)
@@ -42,6 +42,9 @@ public class Unit : MonoBehaviour
     public void Move(Vector3 newPosition)
     {
         _movement.Move(newPosition);
+
+        if (_lookAtJob != null)
+            StopCoroutine(_lookAtJob);
     }
 
     public void Select()

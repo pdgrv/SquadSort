@@ -3978,7 +3978,6 @@ MonoBehaviour:
   _rotationSpeed: 3
   _attackMaxID: 2
   _dieMaxID: 2
-  _voiceTimer: 2
 --- !u!136 &357788628
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4001,7 +4000,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 175944}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 5
   m_Drag: Infinity
   m_AngularDrag: 1
   m_UseGravity: 0

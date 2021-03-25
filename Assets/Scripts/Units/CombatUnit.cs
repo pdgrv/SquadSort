@@ -20,7 +20,7 @@ public abstract class CombatUnit : MonoBehaviour
     protected Animator Animator;
     protected CombatUnit CurrentTarget;
 
-    protected UnitMovement _movement;
+    //protected UnitMovement _movement;
 
     protected float LastAttackTimer = 0f;
 
@@ -29,7 +29,7 @@ public abstract class CombatUnit : MonoBehaviour
     private void Awake()
     {
         Animator = GetComponent<Animator>();
-        _movement = GetComponent<UnitMovement>();
+        //_movement = GetComponent<UnitMovement>();
     }
 
     public void SetTarget(CombatUnit target)
@@ -69,11 +69,10 @@ public abstract class CombatUnit : MonoBehaviour
 
     protected virtual void Move(CombatUnit target) //используется сейчас только в зомби.
     {
-        //LookDirection(target.transform.position - transform.position);
+        LookDirection(target.transform.position - transform.position);
+        transform.position = Vector3.MoveTowards(transform.position, target.transform.position, Time.deltaTime * MoveSpeed);
 
-        //transform.position = Vector3.MoveTowards(transform.position, target.transform.position, Time.deltaTime * MoveSpeed);
-
-        _movement.Move(target.transform.position);
+        //_movement.Move(target.transform.position);
     }
 
 
@@ -88,7 +87,7 @@ public abstract class CombatUnit : MonoBehaviour
         DiedSound();
 
         enabled = false;
-        _movement.enabled = false;
+        //_movement.enabled = false;
     }
 
     private IEnumerator ApplyDamageTimer(int damage, float timer)

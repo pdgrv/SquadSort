@@ -12,12 +12,12 @@ public abstract class Audio : MonoBehaviour
         AudioSource = GetComponent<AudioSource>();
     }
 
-    protected void PlayOneShot(AudioClip clip, int chance = 100)
+    protected void PlayOneShot(AudioClip clip, int chance = 100, float volumeScale = 1f)
     {
         AudioSource.pitch = Random.Range(0.9f, 1.1f);
 
         if (Random.Range(0,100) < chance)
-            AudioSource.PlayOneShot(clip);
+            AudioSource.PlayOneShot(clip, volumeScale);
     }
 
     protected void PlayOneShot(AudioClip clip, float delay, int chance = 100)
