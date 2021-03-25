@@ -87,7 +87,6 @@ public class Zombie : CombatUnit
 
     protected override void ApplyDamageSound()
     {
-        ZombieAudio.Instance.ApplyDamage();
     }
 
     protected override void DiedSound()

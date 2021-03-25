@@ -176,6 +176,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1213052131399399279, guid: ed10eecd0414e4046bad933945623e7b,
+        type: 3}
+      propertyPath: MoveSpeed
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed10eecd0414e4046bad933945623e7b, type: 3}
 --- !u!1 &571662
@@ -639,7 +644,7 @@ PrefabInstance:
     - target: {fileID: 1213052131399399279, guid: ed10eecd0414e4046bad933945623e7b,
         type: 3}
       propertyPath: MoveSpeed
-      value: 2.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1910607629717879036, guid: ed10eecd0414e4046bad933945623e7b,
         type: 3}
@@ -11929,6 +11934,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6214014188258168249, guid: 38db6d045488ae64f99fb1685f0f0bbd,
+        type: 3}
+      propertyPath: MoveSpeed
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38db6d045488ae64f99fb1685f0f0bbd, type: 3}
 --- !u!1001 &670958587
@@ -17712,7 +17722,7 @@ PrefabInstance:
     - target: {fileID: 6214014188258168249, guid: 38db6d045488ae64f99fb1685f0f0bbd,
         type: 3}
       propertyPath: MoveSpeed
-      value: 2.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6855556882339523058, guid: 38db6d045488ae64f99fb1685f0f0bbd,
         type: 3}
@@ -21178,6 +21188,11 @@ PrefabInstance:
     - target: {fileID: 449532, guid: e1436d009cc2f8b4caceef32a03b8309, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8763723098204921745, guid: e1436d009cc2f8b4caceef32a03b8309,
+        type: 3}
+      propertyPath: MoveSpeed
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1436d009cc2f8b4caceef32a03b8309, type: 3}
@@ -26993,6 +27008,7 @@ MonoBehaviour:
   _celebrate: {fileID: 8300000, guid: f7f934f171cc7f742b8f358cb26b197a, type: 3}
   _swordsAttack:
   - {fileID: 8300000, guid: ea7bae9a709b1584a849bdf77f5539f4, type: 3}
+  - {fileID: 8300000, guid: ed31f39f33f3dac4086c7ae16e082b86, type: 3}
   _attackSoundChance: 4
   _bowShoot: {fileID: 8300000, guid: cd0963a1c61a2454ea319b76673f32fd, type: 3}
   _bowShootSoundChance: 30
@@ -27000,7 +27016,7 @@ MonoBehaviour:
   _applyDamageSoundChance: 5
   _die: {fileID: 8300000, guid: 565695e697bb0c44085b1ab671de2341, type: 3}
   _bowHit: {fileID: 8300000, guid: e97658e3de04263409fa3fb50ff10c8d, type: 3}
-  _bowHitChance: 30
+  _bowHitChance: 45
 --- !u!1001 &1508535682
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30893,7 +30909,7 @@ PrefabInstance:
     - target: {fileID: 8763723098204921745, guid: e1436d009cc2f8b4caceef32a03b8309,
         type: 3}
       propertyPath: MoveSpeed
-      value: 2.5
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1436d009cc2f8b4caceef32a03b8309, type: 3}
@@ -31775,13 +31791,11 @@ MonoBehaviour:
   _attacks:
   - {fileID: 8300000, guid: 3799becfce8951643a52c0f476982fa0, type: 3}
   - {fileID: 8300000, guid: 4d9d6099fcc30ad4483b843f5a43c09a, type: 3}
-  _attackSoundChance: 5
-  _applyDamage:
-  - {fileID: 8300000, guid: 3799becfce8951643a52c0f476982fa0, type: 3}
-  _applyDamageSoundChance: 4
+  _attackSoundChance: -1
   _die:
   - {fileID: 8300000, guid: 7a873270d9933034b8a653d6d8a89c5d, type: 3}
-  _dieSoundChance: 7
+  - {fileID: 8300000, guid: 3799becfce8951643a52c0f476982fa0, type: 3}
+  _dieSoundChance: 15
 --- !u!4 &1881611645
 Transform:
   m_ObjectHideFlags: 0

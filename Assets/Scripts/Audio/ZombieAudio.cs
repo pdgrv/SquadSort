@@ -12,8 +12,8 @@ public class ZombieAudio : Audio
     [Header("Combat")]
     [SerializeField] private List<AudioClip> _attacks;
     [SerializeField] private int _attackSoundChance;
-    [SerializeField] private List<AudioClip> _applyDamage;
-    [SerializeField] private int _applyDamageSoundChance;
+    //[SerializeField] private List<AudioClip> _applyDamage;
+    //[SerializeField] private int _applyDamageSoundChance;
     [SerializeField] private List<AudioClip> _die;
     [SerializeField] private int _dieSoundChance;
 
@@ -52,10 +52,10 @@ public class ZombieAudio : Audio
         PlayOneShot(_attacks[Random.Range(0, _attacks.Count)], _attackSoundChance);
     }
 
-    public void ApplyDamage()
-    {
-        PlayOneShot(_applyDamage[Random.Range(0, _applyDamage.Count)], _applyDamageSoundChance);
-    }
+    //public void ApplyDamage()
+    //{
+    //    PlayOneShot(_applyDamage[Random.Range(0, _applyDamage.Count)], _applyDamageSoundChance);
+    //}
 
     public void Die()
     {
