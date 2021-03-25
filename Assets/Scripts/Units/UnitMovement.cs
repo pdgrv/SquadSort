@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 //надо бы объединить все передвижение и повороты юнитов сюда как-то
 public class UnitMovement : MonoBehaviour
@@ -9,27 +10,29 @@ public class UnitMovement : MonoBehaviour
     [SerializeField] private float _rotationSpeed = 3f;
     [SerializeField] private float _stoppingDistance = 1.5f;
 
+    private NavMeshAgent _agent;
+
     private Vector3 _targetPosition;
 
     public bool IsMooving { get; private set; }
 
-    private void Update()
+    private void Awake()
     {
-        if (_targetPosition == null)
-            return;
-        else if (Vector3.Distance(transform.position, _targetPosition) > _stoppingDistance)
-            Move();
-        else
-            IsMooving = false;
+        _agent = GetComponent<NavMeshAgent>();
     }
 
-    private void Move()
+    private void Update()
     {
-        IsMooving = true;
+    }
 
-        LookDirection(transform.position, _targetPosition);
+    private void OnDisable()
+    {
+        _agent.enabled = false;
+    }
 
-        transform.position = Vector3.MoveTowards(transform.position, _targetPosition, Time.deltaTime * _moveSpeed);
+    public void Move(Vector3 targetPoint)
+    {
+        _agent.SetDestination(targetPoint);
     }
 
     private void LookDirection(Vector3 direction)
