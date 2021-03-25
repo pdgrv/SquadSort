@@ -31,6 +31,7 @@ public class ContainerBorders : MonoBehaviour
 
     private void UpdateBorderSize(NavMeshObstacle targetBorder, int count)
     {
+        count--;
         targetBorder.size = new Vector3(targetBorder.size.x, targetBorder.size.y, _sizePerUnit * count);
         targetBorder.center = new Vector3(0, 0, -0.4f + _sizePerUnit / 2 * count);
     }

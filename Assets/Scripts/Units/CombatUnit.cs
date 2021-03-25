@@ -20,8 +20,6 @@ public abstract class CombatUnit : MonoBehaviour
     protected Animator Animator;
     protected CombatUnit CurrentTarget;
 
-    //protected UnitMovement _movement;
-
     protected float LastAttackTimer = 0f;
 
     public bool IsAlive => _health > 0;
@@ -29,7 +27,6 @@ public abstract class CombatUnit : MonoBehaviour
     private void Awake()
     {
         Animator = GetComponent<Animator>();
-        //_movement = GetComponent<UnitMovement>();
     }
 
     public void SetTarget(CombatUnit target)
@@ -72,9 +69,7 @@ public abstract class CombatUnit : MonoBehaviour
         LookDirection(target.transform.position - transform.position);
         transform.position = Vector3.MoveTowards(transform.position, target.transform.position, Time.deltaTime * MoveSpeed);
 
-        //_movement.Move(target.transform.position);
     }
-
 
     protected virtual void Die() //что-то тут не чисто
     {
@@ -87,7 +82,6 @@ public abstract class CombatUnit : MonoBehaviour
         DiedSound();
 
         enabled = false;
-        //_movement.enabled = false;
     }
 
     private IEnumerator ApplyDamageTimer(int damage, float timer)
@@ -109,12 +103,6 @@ public abstract class CombatUnit : MonoBehaviour
         }
     }
 
-    protected abstract void AttackSound();
-
-    protected abstract void ApplyDamageSound();
-
-    protected abstract void DiedSound();
-
     private void LookDirection(Vector3 direction)
     {
         if (direction.magnitude < 0.05f)
@@ -124,4 +112,9 @@ public abstract class CombatUnit : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, _rotationSpeed * Time.deltaTime);
     }
 
+    protected abstract void AttackSound();
+
+    protected abstract void ApplyDamageSound();
+
+    protected abstract void DiedSound();
 }

@@ -89,15 +89,21 @@ public class Squad : MonoBehaviour
         SetCombatUnits();
         SquadFulled?.Invoke();
 
-        if (_completedSquadFX != null)
-            _completedSquadFX.Play(); //уже с таймером
-
         yield return new WaitForFixedUpdate();
 
         for (int i = 0; i < _units.Count; i++)
         {
-            yield return _units[i].MovementJob;
+            if (_units[i].IsMove)
+            {
+                i--;
+                yield return new WaitForFixedUpdate();
+            }
         }
+
+        if (_completedSquadFX != null)
+            _completedSquadFX.Play();
+
+        yield return new WaitForSeconds(0.1f);
 
         for (int i = 0; i < _units.Count; i++)
         {

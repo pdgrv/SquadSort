@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
@@ -17,6 +18,8 @@ public class Unit : MonoBehaviour
     private Coroutine _movementJob;
     private Coroutine _lookAtJob;
 
+    public bool IsMove { get; private set; } = false;
+
     public Coroutine MovementJob => _movementJob;
     public CombatUnit CombatUnit => _combatUnit;
     public UnitType Type => _type;
@@ -31,6 +34,17 @@ public class Unit : MonoBehaviour
         _movement = GetComponent<UnitMovement>();
     }
 
+    private void OnEnable()
+    {
+        _movement.ArrivedDestination += OnArrivedDestination;
+    }
+
+    private void OnDisable()
+    {
+        _movement.ArrivedDestination -= OnArrivedDestination;
+    }
+
+
     //public void Move(Vector3 newPosition)
     //{
     //    if (_movementJob != null)
@@ -41,6 +55,7 @@ public class Unit : MonoBehaviour
 
     public void Move(Vector3 newPosition)
     {
+        IsMove = true;
         _movement.Move(newPosition);
 
         if (_lookAtJob != null)
@@ -70,25 +85,10 @@ public class Unit : MonoBehaviour
         _unitEffects.Complete();
     }
 
-    private IEnumerator Movement(Vector3 newPosition)
+    private void OnArrivedDestination()
     {
-        _animator.SetBool("Run", true);
-
-        LookAt(new Vector3(newPosition.x, transform.position.y, newPosition.z));
-
-        while (Vector3.Distance(transform.position, newPosition) > 0.1f)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, newPosition, Time.deltaTime * _speed);
-
-            yield return null;
-        }
-
-        transform.position = newPosition;
-        _animator.SetBool("Run", false);
-
+        IsMove = false;
         LookAt(transform.position + Vector3.forward);
-
-        _movementJob = null;
     }
 
     private void LookAt(Vector3 target)

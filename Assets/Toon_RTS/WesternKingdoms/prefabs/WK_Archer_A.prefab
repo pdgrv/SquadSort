@@ -11482,8 +11482,8 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.25
-  m_Speed: 4
-  m_Acceleration: 10
+  m_Speed: 4.5
+  m_Acceleration: 12
   avoidancePriority: 50
   m_AngularSpeed: 1080
   m_StoppingDistance: 0
@@ -11506,9 +11506,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09c87c81c2c8fcf439f6a5bdde294c75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 3
-  _rotationSpeed: 10
-  _stoppingDistance: 1.5
 --- !u!1 &3447711905656471223
 GameObject:
   m_ObjectHideFlags: 0

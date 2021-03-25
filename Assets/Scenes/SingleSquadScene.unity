@@ -516,7 +516,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.033333335
+  m_VoxelSize: 0.06666667
   m_BuildHeightMesh: 0
   m_NavMeshData: {fileID: 23800000, guid: 147e68f33397fa749b6153bc15451928, type: 2}
 --- !u!4 &121452552
@@ -23221,8 +23221,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.4399567, y: 3.0624359, z: 1.5239391}
-  m_Center: {x: 0, y: 1.5419226, z: 1.1501541}
+  m_Size: {x: 3.4399567, y: 3.0624359, z: 1.2760019}
+  m_Center: {x: 0, y: 1.5419226, z: 1.0261855}
 --- !u!4 &1484524322
 Transform:
   m_ObjectHideFlags: 0
@@ -30421,6 +30421,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1609483280}
   - component: {fileID: 1609483279}
+  - component: {fileID: 1609483281}
   m_Layer: 0
   m_Name: Squad6
   m_TagString: Untagged
@@ -30443,7 +30444,7 @@ MonoBehaviour:
   _fullSquadCount: 4
   _units:
   - {fileID: 2101603474}
-  _completedSquadFX: {fileID: 0}
+  _completedSquadFX: {fileID: 1609483281}
 --- !u!4 &1609483280
 Transform:
   m_ObjectHideFlags: 0
@@ -30459,6 +30460,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!111 &1609483281
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609483278}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 86946d8d762e66e49b5c4962f365fe80, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 86946d8d762e66e49b5c4962f365fe80, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!4 &1633555574 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6827742104153468666, guid: 625b9ce488d681241950ab287a9a4584,
@@ -31111,14 +31128,15 @@ MonoBehaviour:
   _voices:
   - {fileID: 8300000, guid: cb43ffdeacac80048b51895a818d8d48, type: 3}
   - {fileID: 8300000, guid: 5cde0603fdd079e48bce30cc9317db86, type: 3}
+  - {fileID: 8300000, guid: 4d9d6099fcc30ad4483b843f5a43c09a, type: 3}
   _averageVoiceTimer: 40
   _attacks:
   - {fileID: 8300000, guid: 3799becfce8951643a52c0f476982fa0, type: 3}
   - {fileID: 8300000, guid: 4d9d6099fcc30ad4483b843f5a43c09a, type: 3}
-  _attackSoundChance: 4
+  _attackSoundChance: 5
   _applyDamage:
   - {fileID: 8300000, guid: 3799becfce8951643a52c0f476982fa0, type: 3}
-  _applyDamageSoundChance: 3
+  _applyDamageSoundChance: 4
   _die:
   - {fileID: 8300000, guid: 7a873270d9933034b8a653d6d8a89c5d, type: 3}
   _dieSoundChance: 7

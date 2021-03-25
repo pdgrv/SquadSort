@@ -114,11 +114,12 @@ public class SquadsContainer : MonoBehaviour
     public void FocusOn()
     {
         LastSquad.SelectSquad();
-        _borders.UpdateBorders(TotalUnits);
 
         ChangeColor(_selectedColor);
 
         UnitsAudio.Instance.Select();
+
+        _borders.UpdateBorders(TotalUnits);
     }
 
     public void FocusOff()
@@ -126,9 +127,8 @@ public class SquadsContainer : MonoBehaviour
         if (!IsFree)
             LastSquad.UnselectSquad();
 
-        _borders.UpdateBorders(TotalUnits);
-        //_material.SetColor("_Color", _baseColor);
         ChangeColor(_baseColor);
+        _borders.UpdateBorders(TotalUnits);
     }
 
     public void FocusBad()

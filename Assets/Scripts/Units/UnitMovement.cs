@@ -2,19 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 
 //надо бы объединить все передвижение и повороты юнитов сюда как-то
 public class UnitMovement : MonoBehaviour
 {
-    [SerializeField] private float _moveSpeed = 3f;
-    [SerializeField] private float _rotationSpeed = 3f;
-    [SerializeField] private float _stoppingDistance = 1.5f;
-
     private Animator _animator;
-
     private NavMeshAgent _agent;
 
-    private Vector3 _targetPosition;
+    public event UnityAction ArrivedDestination;
 
     public bool IsMooving { get; private set; } = false;
 
@@ -30,14 +26,14 @@ public class UnitMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (_agent.remainingDistance > 0.02f)
+        if (_agent.remainingDistance > 0.005f)
         {
             IsMooving = true;
         }
         else if (IsMooving)
         {
             IsMooving = false;
-
+            ArrivedDestination?.Invoke();
         }
 
         _animator.SetBool("Run", IsMooving);
@@ -46,17 +42,5 @@ public class UnitMovement : MonoBehaviour
     public void Move(Vector3 targetPoint)
     {
         _agent.SetDestination(targetPoint);
-    }
-
-    private void LookDirection(Vector3 direction)
-    {
-        Quaternion lookRotation = Quaternion.LookRotation(direction);
-        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, _rotationSpeed * Time.deltaTime);
-    }
-
-    private void LookDirection(Vector3 currentPos, Vector3 targetPos)
-    {
-        Vector3 direction = targetPos - currentPos;
-        LookDirection(direction);
     }
 }
