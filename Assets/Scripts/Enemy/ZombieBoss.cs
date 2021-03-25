@@ -11,11 +11,10 @@ public class ZombieBoss : Zombie
 
         UnitEffects.Die();
 
+        enabled = false;
+
         if (TryGetComponent(out Collider collider))
             collider.enabled = false;
-
-        enabled = false;
-        _movement.enabled = false;
 
         RaiseZombieDiedEvent();
     }

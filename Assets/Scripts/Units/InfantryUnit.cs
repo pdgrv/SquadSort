@@ -20,7 +20,7 @@ public class InfantryUnit : CombatUnit
 
     private void FixedUpdate()
     {
-        Collider[] enemies = Physics.OverlapSphere(transform.position, AttackDistance);
+        Collider[] enemies = Physics.OverlapSphere(transform.position, AttackDistance); //дубляж кода с ArcheryUnit
         LastAttackTimer -= Time.deltaTime;
 
         if (CurrentTarget == null)

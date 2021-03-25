@@ -7,8 +7,6 @@ public class Unit : MonoBehaviour
     [SerializeField] private UnitType _type;
     [SerializeField] private float _speed = 5f;
     [SerializeField] private UnitEffects _unitEffects;
-    
-    private UnitMovement _movement;
 
     private Animator _animator;
     private CombatUnit _combatUnit;
@@ -27,21 +25,14 @@ public class Unit : MonoBehaviour
         _combatUnit = GetComponent<CombatUnit>();
         _lookAtPlayer = Camera.main.transform.position;
         _lookAtPlayer.y = transform.position.y;
-
-        _movement = GetComponent<UnitMovement>(); 
     }
-
-    //public void Move(Vector3 newPosition)
-    //{
-    //    if (_movementJob != null)
-    //        StopCoroutine(_movementJob);
-
-    //    _movementJob = StartCoroutine(Movement(newPosition));
-    //}
 
     public void Move(Vector3 newPosition)
     {
-        _movement.Move(newPosition);
+        if (_movementJob != null)
+            StopCoroutine(_movementJob);
+
+        _movementJob = StartCoroutine(Movement(newPosition));
     }
 
     public void Select()

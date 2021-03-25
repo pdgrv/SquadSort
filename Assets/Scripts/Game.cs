@@ -27,8 +27,6 @@ public class Game : MonoBehaviour
 
         _debugReloadScene = GetComponent<ReloadScene>();
         _debugReloadScene.enabled = false;
-
-        Time.timeScale = 0.5f;
     }
 
     private void OnEnable()

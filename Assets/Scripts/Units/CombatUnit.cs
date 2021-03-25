@@ -20,8 +20,6 @@ public abstract class CombatUnit : MonoBehaviour
     protected Animator Animator;
     protected CombatUnit CurrentTarget;
 
-    protected UnitMovement _movement;
-
     protected float LastAttackTimer = 0f;
 
     public bool IsAlive => _health > 0;
@@ -29,23 +27,6 @@ public abstract class CombatUnit : MonoBehaviour
     private void Awake()
     {
         Animator = GetComponent<Animator>();
-        _movement = GetComponent<UnitMovement>();
-    }
-
-    public void SetTarget(CombatUnit target)
-    {
-        CurrentTarget = target;
-    }
-
-    public void CelebrateWictory()
-    {
-        Animator.ResetTrigger("Attack");
-        Animator.SetTrigger("Celebrate");
-    }
-
-    public void ApplyDamage(int damage, float timer)
-    {
-        StartCoroutine(ApplyDamageTimer(damage, timer));
     }
 
     protected virtual void Attack(CombatUnit target)
@@ -67,15 +48,28 @@ public abstract class CombatUnit : MonoBehaviour
         }
     }
 
-    protected virtual void Move(CombatUnit target) //используется сейчас только в зомби.
+    public void ApplyDamage(int damage, float timer)
     {
-        //LookDirection(target.transform.position - transform.position);
-
-        //transform.position = Vector3.MoveTowards(transform.position, target.transform.position, Time.deltaTime * MoveSpeed);
-
-        _movement.Move(target.transform.position);
+        StartCoroutine(ApplyDamageTimer(damage, timer));
     }
 
+    protected virtual void Move(CombatUnit target) //используется сейчас только в зомби.
+    {
+        LookDirection(target.transform.position - transform.position);
+
+        transform.position = Vector3.MoveTowards(transform.position, target.transform.position, Time.deltaTime * MoveSpeed);
+    }
+
+    public void SetTarget(CombatUnit target)
+    {
+        CurrentTarget = target;
+    }
+
+    public void CelebrateWictory()
+    {
+        Animator.ResetTrigger("Attack");
+        Animator.SetTrigger("Celebrate");
+    }
 
     protected virtual void Die() //что-то тут не чисто
     {
@@ -88,7 +82,6 @@ public abstract class CombatUnit : MonoBehaviour
         DiedSound();
 
         enabled = false;
-        _movement.enabled = false;
     }
 
     private IEnumerator ApplyDamageTimer(int damage, float timer)
