@@ -21,7 +21,8 @@ public class DoorDestroy : Audio
 
     public void Fall()
     {
-        PlayOneShot(_fall, volumeScale: 0.8f);
+        PlayOneShot(_fall, volumeScale: 0.7f);
+        PlayOneShot(_fall, 0.01f, volumeScale:0.65f);
     }
 
     private void OnTriggerEnter(Collider other)

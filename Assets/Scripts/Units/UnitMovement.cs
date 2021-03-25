@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
 
-//надо бы объединить все передвижение и повороты юнитов сюда как-то
 public class UnitMovement : MonoBehaviour
 {
     private Animator _animator;

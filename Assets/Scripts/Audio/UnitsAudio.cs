@@ -33,7 +33,7 @@ public class UnitsAudio : Audio
 
     public void Attack()
     {
-        PlayOneShot(_swordsAttack[Random.Range(0, _swordsAttack.Count)]);
+        PlayOneShot(_swordsAttack[Random.Range(0, _swordsAttack.Count)], volumeScale:Random.Range(0.7f,0.9f));
     }
 
     public void Shoot()

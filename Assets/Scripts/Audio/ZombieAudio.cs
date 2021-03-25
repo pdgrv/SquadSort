@@ -42,7 +42,7 @@ public class ZombieAudio : Audio
         {
             Voice();
 
-            _realTimer = _averageVoiceTimer / _zombiesCount;
+            _realTimer = _averageVoiceTimer / _zombiesCount + Random.Range(-0.3f, 0.3f);
             _timer = 0;
         }
     }

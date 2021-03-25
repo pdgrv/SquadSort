@@ -13109,7 +13109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sortingMusic: {fileID: 718619823}
   _battleMusic: {fileID: 718619822}
-  _transitionTime: 4
+  _transitionTime: 5
 --- !u!4 &718619825
 Transform:
   m_ObjectHideFlags: 0
@@ -31129,7 +31129,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: cb43ffdeacac80048b51895a818d8d48, type: 3}
   - {fileID: 8300000, guid: 5cde0603fdd079e48bce30cc9317db86, type: 3}
   - {fileID: 8300000, guid: 4d9d6099fcc30ad4483b843f5a43c09a, type: 3}
-  _averageVoiceTimer: 40
+  _averageVoiceTimer: 35
   _attacks:
   - {fileID: 8300000, guid: 3799becfce8951643a52c0f476982fa0, type: 3}
   - {fileID: 8300000, guid: 4d9d6099fcc30ad4483b843f5a43c09a, type: 3}

@@ -20,15 +20,15 @@ public abstract class Audio : MonoBehaviour
             AudioSource.PlayOneShot(clip, volumeScale);
     }
 
-    protected void PlayOneShot(AudioClip clip, float delay, int chance = 100)
+    protected void PlayOneShot(AudioClip clip, float delay, int chance = 100, float volumeScale = 1f)
     {
-        StartCoroutine(PlayingOneShot(clip,delay,chance));
+        StartCoroutine(PlayingOneShot(clip,delay,chance, volumeScale));
     }
 
-    private IEnumerator PlayingOneShot(AudioClip clip, float delay, int chance = 100)
+    private IEnumerator PlayingOneShot(AudioClip clip, float delay, int chance = 100, float volumeScale = 1f)
     {
         yield return new WaitForSeconds(delay);
 
-        PlayOneShot(clip, chance);
+        PlayOneShot(clip, chance, volumeScale);
     }
 }
