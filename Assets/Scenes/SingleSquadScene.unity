@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.33650768, g: 0.35184702, b: 0.3584906, a: 1}
+  m_AmbientSkyColor: {r: 0.28279635, g: 0.2905215, b: 0.2924528, a: 1}
   m_AmbientEquatorColor: {r: 0.34539953, g: 0.33753118, b: 0.38679248, a: 1}
   m_AmbientGroundColor: {r: 0.047169805, g: 0.047169805, b: 0.047169805, a: 1}
   m_AmbientIntensity: 1
@@ -175,11 +175,6 @@ PrefabInstance:
     - target: {fileID: 417186, guid: ed10eecd0414e4046bad933945623e7b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1213052131399399279, guid: ed10eecd0414e4046bad933945623e7b,
-        type: 3}
-      propertyPath: DamageAnticipationTimer
-      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed10eecd0414e4046bad933945623e7b, type: 3}
@@ -7421,7 +7416,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 116678, guid: cbaf2c9f645e7d148aa4402a74bf6e9f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 403218, guid: cbaf2c9f645e7d148aa4402a74bf6e9f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12028,11 +12023,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6214014188258168249, guid: 38db6d045488ae64f99fb1685f0f0bbd,
-        type: 3}
-      propertyPath: DamageAnticipationTimer
-      value: 0.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38db6d045488ae64f99fb1685f0f0bbd, type: 3}
 --- !u!1001 &670958587
@@ -14989,7 +14979,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 101216, guid: 7108a4809ddc3c346be7edaacc087869, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 412088, guid: 7108a4809ddc3c346be7edaacc087869, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21300,11 +21290,6 @@ PrefabInstance:
     - target: {fileID: 449532, guid: e1436d009cc2f8b4caceef32a03b8309, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8763723098204921745, guid: e1436d009cc2f8b4caceef32a03b8309,
-        type: 3}
-      propertyPath: DamageAnticipationTimer
-      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1436d009cc2f8b4caceef32a03b8309, type: 3}
