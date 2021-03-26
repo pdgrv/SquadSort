@@ -21,8 +21,8 @@ public class UnitsAudio : Audio
     [SerializeField] private int _bowShootSoundChance;
     [SerializeField] private AudioClip _applyDamage;
     [SerializeField] private int _applyDamageSoundChance;
-    [SerializeField] private AudioClip _die;
-    [SerializeField] private AudioClip _bowHit;
+    [SerializeField] private List<AudioClip> _dies;
+    [SerializeField] private List<AudioClip> _bowHits;
     [SerializeField] private int _bowHitChance;
 
     private void Start()
@@ -35,7 +35,7 @@ public class UnitsAudio : Audio
 
     public void Attack()
     {
-        PlayOneShot(_swordsAttack[Random.Range(0, _swordsAttack.Count)], volumeScale: Random.Range(0.85f, 1f));
+        PlayOneShot(_swordsAttack[Random.Range(0, _swordsAttack.Count)], _attackSoundChance, volumeScale: Random.Range(0.85f, 1f));
     }
 
     public void Shoot()
@@ -45,17 +45,17 @@ public class UnitsAudio : Audio
 
     public void BowHit()
     {
-        PlayOneShot(_bowHit, _bowHitChance, Random.Range(0.4f, 0.5f));
+        PlayOneShot(_bowHits[Random.Range(0,_bowHits.Count)], _bowHitChance, Random.Range(0.9f,1f));
     }
 
     public void ApplyDamage()
     {
-        PlayOneShot(_applyDamage, _applyDamageSoundChance);
+        PlayOneShot(_applyDamage, _applyDamageSoundChance, Random.Range(0.8f,0.9f));
     }
 
     public void Die()
     {
-        PlayOneShot(_die);
+        PlayOneShot(_dies[Random.Range(0,_dies.Count)]);
     }
 
     public void Select()

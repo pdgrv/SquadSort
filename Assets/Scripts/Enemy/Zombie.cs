@@ -7,11 +7,11 @@ public class Zombie : CombatUnit
 {
     public event UnityAction<Zombie> ZombieDied;
 
-    private ZombieBrain _brain;
+    protected ZombieBrain Brain;
 
     private void Start()
     {
-        _brain = GetComponentInParent<ZombieBrain>();
+        Brain = GetComponentInParent<ZombieBrain>();
     }
 
     private void Update()
@@ -60,9 +60,9 @@ public class Zombie : CombatUnit
         gameObject.SetActive(false);
     }
 
-    private void FindNewTarget()
+    protected virtual void FindNewTarget()
     {
-        CurrentTarget = _brain.GetRandomUnit();
+        CurrentTarget = Brain.GetRandomUnit();
     }
 
     protected override void Die()

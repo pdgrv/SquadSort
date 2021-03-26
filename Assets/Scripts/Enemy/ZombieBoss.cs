@@ -23,4 +23,9 @@ public class ZombieBoss : Zombie
     {
         return;
     }
+
+    protected override void FindNewTarget()
+    {
+        CurrentTarget = Brain.GetRandomCentreUnit();
+    }
 }

@@ -64,7 +64,7 @@ public class ZombieAudio : Audio
 
     public void Voice()
     {
-        PlayOneShot(_voices[Random.Range(0, _voices.Count)], 70, Random.Range(0.7f,0.85f));
+        PlayOneShot(_voices[Random.Range(0, _voices.Count)], 70, Random.Range(0.55f,0.75f));
     }
 
     public void UpdateZombieCount(int count)

@@ -11461,7 +11461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bae3301082f7504a9111da04ad4144f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 2
+  _health: 4
   _damage: 2
   DamageAnticipationTimer: 0.7
   AttackDistance: 10

@@ -3433,11 +3433,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db2fba51968080e4e8f3cff7909b8895, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 6
+  _health: 8
   _damage: 2
   DamageAnticipationTimer: 0.4
   AttackDistance: 1.7
-  _attackDelay: 0.9
+  _attackDelay: 0.6
   MoveSpeed: 2
   UnitEffects: {fileID: 5356727253446570241}
   _rotationSpeed: 5

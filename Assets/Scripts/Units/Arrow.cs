@@ -35,9 +35,9 @@ public class Arrow : MonoBehaviour
 
             if (Vector3.Distance(transform.position, _currentTarget.transform.position + _targetHitOffset) < 0.05f)
             {
+                UnitsAudio.Instance.BowHit();
                 _isFly = false;
                 _impactFX.Play();
-                UnitsAudio.Instance.BowHit();
 
                 _arrow.SetActive(false);
             }

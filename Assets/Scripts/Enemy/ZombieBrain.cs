@@ -81,6 +81,13 @@ public class ZombieBrain : MonoBehaviour
         return _frontUnits.Count > 0 ? _frontUnits[Random.Range(0, _frontUnits.Count)] : null;
     }
 
+    public CombatUnit GetRandomCentreUnit()//for boss
+    {
+        UpdateUnits();
+
+        return _frontUnits.Count > 0 ? _frontUnits[Random.Range(1, _frontUnits.Count - 1)] : null;
+    }
+
     private void OnZombieDied(Zombie zombie)
     {
         _zombies.Remove(zombie);
@@ -88,7 +95,7 @@ public class ZombieBrain : MonoBehaviour
         if (_zombies.Count <= 0)
             AllZombieKilled?.Invoke();
 
-        if (Random.Range(0,100) > _deadZombiesFillrate)
+        if (Random.Range(0, 100) > _deadZombiesFillrate)
         {
             zombie.Hide();
         }
