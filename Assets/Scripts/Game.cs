@@ -11,6 +11,11 @@ public class Game : MonoBehaviour
     [SerializeField] private ZombieBrain _zombieBrain;
     [SerializeField] private CameraController _cameraController;
 
+    [Range(0.3f, 1f)]
+    [SerializeField] private float _timeScale = 1f;
+    [SerializeField] private float _TimeScaleSpeed = 0.5f;
+    [SerializeField] private float _currentTimeScale;
+
     private ReloadScene _debugReloadScene;
     private BackgroundMusic _backgroundMusic;
 
@@ -26,6 +31,8 @@ public class Game : MonoBehaviour
 
         _debugReloadScene = GetComponent<ReloadScene>();
         _debugReloadScene.enabled = false;
+
+        _currentTimeScale = Time.timeScale = _timeScale;
     }
 
     private void OnEnable()
@@ -38,6 +45,13 @@ public class Game : MonoBehaviour
         _zombieBrain.AllZombieKilled += OnAllZombieKilled;
     }
 
+    private void Update()
+    {
+        if (Math.Abs(Time.timeScale - _timeScale) > 0.005f)
+        {
+            _currentTimeScale = Time.timeScale = Mathf.Lerp(Time.timeScale, _timeScale, _TimeScaleSpeed * Time.deltaTime);
+        }
+    }
 
     private void OnDisable()
     {
