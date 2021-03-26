@@ -13,6 +13,7 @@ public class SquadsContainer : MonoBehaviour
     [SerializeField] private Color _selectedColor;
     [SerializeField] private Color _completedColor;
     [SerializeField] private Color _badColor;
+    [SerializeField] private float _colorChangeDuration = 0.5f;
 
     private Material _material;
     private ContainerBorders _borders;
@@ -143,7 +144,7 @@ public class SquadsContainer : MonoBehaviour
         if (_changeColorJob != null)
             StopCoroutine(_changeColorJob);
 
-        _changeColorJob = StartCoroutine(ChangingColor(targetColor));
+        _changeColorJob = StartCoroutine(ChangingColor(targetColor, _colorChangeDuration));
     }
 
     private IEnumerator FlashingColor(Color targetColor)
@@ -151,21 +152,21 @@ public class SquadsContainer : MonoBehaviour
         if (_changeColorJob != null)
             StopCoroutine(_changeColorJob);
 
-        _changeColorJob = StartCoroutine(ChangingColor(targetColor));
+        _changeColorJob = StartCoroutine(ChangingColor(targetColor, _colorChangeDuration));
         yield return _changeColorJob;
-        _changeColorJob = StartCoroutine(ChangingColor(_baseColor));
+        _changeColorJob = StartCoroutine(ChangingColor(_baseColor, _colorChangeDuration));
     }
 
-    private IEnumerator ChangingColor(Color targetColor)
+    private IEnumerator ChangingColor(Color targetColor, float duration)
     {
         Color color = _material.color;
 
-        float time = 0;
+        float currentTime = 0;
 
-        while (time < 1)
+        while (currentTime < duration)
         {
-            _material.color = Color.Lerp(color, targetColor, time);
-            time += Time.deltaTime / 0.3f;
+            currentTime += Time.deltaTime;
+            _material.color = Color.Lerp(color, targetColor, currentTime / duration);
             yield return null;
         }
 
