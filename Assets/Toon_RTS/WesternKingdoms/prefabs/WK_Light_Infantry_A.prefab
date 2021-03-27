@@ -3436,7 +3436,7 @@ MonoBehaviour:
   _health: 8
   _damage: 2
   DamageAnticipationTimer: 0.4
-  AttackDistance: 1.7
+  AttackDistance: 1.6
   _attackDelay: 0.6
   MoveSpeed: 2
   UnitEffects: {fileID: 5356727253446570241}
@@ -4299,7 +4299,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7918981313826021833}
   m_LocalRotation: {x: -0.53785163, y: 0.4472111, z: 0.55626935, w: 0.448645}
-  m_LocalPosition: {x: -0.016270546, y: -0.023686435, z: -0.02987045}
+  m_LocalPosition: {x: -0.016270524, y: -0.023686435, z: -0.02987045}
   m_LocalScale: {x: 1, y: 0.99999994, z: 0.99999994}
   m_Children:
   - {fileID: 7918981313825734119}
@@ -4486,7 +4486,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7918981313826021845}
   m_LocalRotation: {x: -0.50000036, y: 0.49999964, z: 0.49999964, w: 0.50000036}
-  m_LocalPosition: {x: 0, y: 0.73484915, z: -0.049094915}
+  m_LocalPosition: {x: 0, y: 0.73484915, z: -0.049094923}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7918981313825734135}

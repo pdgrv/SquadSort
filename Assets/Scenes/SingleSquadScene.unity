@@ -1922,21 +1922,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7918981313825734121, guid: a56dfc257ad60804fa9870fefe4c41b8,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.016270524
-      objectReference: {fileID: 0}
-    - target: {fileID: 7918981313825734121, guid: a56dfc257ad60804fa9870fefe4c41b8,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.023686435
-      objectReference: {fileID: 0}
-    - target: {fileID: 7918981313825734133, guid: a56dfc257ad60804fa9870fefe4c41b8,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.049094923
-      objectReference: {fileID: 0}
     - target: {fileID: 7918981313826021795, guid: a56dfc257ad60804fa9870fefe4c41b8,
         type: 3}
       propertyPath: m_Name
@@ -41620,7 +41605,7 @@ MonoBehaviour:
   _health: 45
   _damage: 10
   DamageAnticipationTimer: 0.5
-  AttackDistance: 2
+  AttackDistance: 1.5
   _attackDelay: 1.7
   MoveSpeed: 2.5
   UnitEffects: {fileID: 2039427145}

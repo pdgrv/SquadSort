@@ -3971,7 +3971,7 @@ MonoBehaviour:
   _health: 2
   _damage: 1
   DamageAnticipationTimer: 0.5
-  AttackDistance: 1.5
+  AttackDistance: 1
   _attackDelay: 1.6
   MoveSpeed: 2.5
   UnitEffects: {fileID: 4482921828536285439}
