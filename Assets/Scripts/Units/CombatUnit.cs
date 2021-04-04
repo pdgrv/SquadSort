@@ -16,13 +16,11 @@ public abstract class CombatUnit : MonoBehaviour
 
     [SerializeField] private int _attackMaxID = 0;
     [SerializeField] private int _dieMaxID = 0;
+    public bool IsAlive => _health > 0;
 
     protected Animator Animator;
     protected CombatUnit CurrentTarget;
-
     protected float LastAttackTimer = 0f;
-
-    public bool IsAlive => _health > 0;
 
     private void Awake()
     {
